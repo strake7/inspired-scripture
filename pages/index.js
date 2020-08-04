@@ -7,7 +7,7 @@ const Home = () => (
 
     <h3>Hooray 🎉 - you've built this with <a href="https://nextjs.org">Next.js</a>!</h3>
 
-    <style jsx>{`
+    {/* <style jsx>{`
       :global(html,body) {
         margin: 0;
         padding: 0;
@@ -38,7 +38,7 @@ const Home = () => (
       .content {
         padding: 0 32px;
       }
-    `}</style>
+    `}</style> */}
   </div>
 )
 
