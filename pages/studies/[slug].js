@@ -1,29 +1,42 @@
-import {useRouter} from 'next/router'
-import fs from 'fs'
-import { join } from 'path'
+import { useRouter } from 'next/router'
+import Layout from "../../components/layout";
+import { getStudyBySlug, getAllStudies } from "../../lib/studies";
+import { Row } from "react-bootstrap";
 
-export default function Study({study}){
-  // const router = useRouter()
-  // if (!router.isFallback && !post?.slug) {
-  //   return <ErrorPage statusCode={404} />
-  // }
-  study.content
+export default function Study({ study }) {
+  const router = useRouter()
 
-
+  if (!router.isFallback && !study?.slug) {
+    return <ErrorPage statusCode={404} />
+  }
+  return (
+    <Layout>      
+      <Row className="studyContent" dangerouslySetInnerHTML={{ __html: study.content }}></Row>
+    </Layout>
+  )
 }
 
 export async function getStaticProps({ params }) {
-  //todo move to central js file
-  const studiesDirectory = join(process.cwd(), '_studies')
-  const realSlug = params.slug.replace(/\.html$/, '')  
-  const fullPath = join(studiesDirectory, `${realSlug}.html`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')  
+  const study = getStudyBySlug(params.slug, [
+    'content'
+  ])
   return {
-    props:{
-      study: {
-        content: fileContents
-        // todo book, title, chapter, verse, etc
-      }
+    props: {
+      study
     }
-  }  
+  }
+}
+
+export async function getStaticPaths() {
+  const studies = getAllStudies(['slug'])  
+  return {
+    paths: studies.map((s) => {
+      return {
+        params: {
+          slug: s.slug,
+        },
+      }
+    }),
+    fallback: false,
+  }
 }
