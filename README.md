@@ -3,8 +3,13 @@
 John's studies are written as word documents. To best present this material in a web browser the content should be converted to markdown. To do this use [pandoc](https://pandoc.org/).
 Example command:
 ```
-
+pandoc --extract-media . \"$fdocx\" -o \"$fhtml\""
 ```
+Or use the helper scripts in the _studies dir.
+```
+source _studies/converter_fns.sh && convert_all_docx
+```
+
 Once the markdown is generated, move the generated file to 
 ## Styling and Components
 [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)

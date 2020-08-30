@@ -11,9 +11,10 @@ function convert_all_docx() {
   for fdocx in *.docx
   do
     fhtml="${fdocx%%.docx}.html" # append html ext           
+    fhtml="${fhtml// /-}" # replace space with dash
     cmd="pandoc --extract-media . \"$fdocx\" -o \"$fhtml\""
     echo "Converting $fdocx to $fhtml. "
-    echo `tput setaf 5`Running command $cmd`tput sgr0`      
+    echo `tput setaf 4`Running command $cmd`tput sgr0`      
     eval $cmd
   done
 }
