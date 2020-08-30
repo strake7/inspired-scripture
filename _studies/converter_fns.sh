@@ -4,6 +4,7 @@
 #   convert_all_docx
 
 # for any docx file within the _studies directory, convert to html using pandoc
+
 function convert_all_docx() {
   echo `tput setaf 3`Starting conversion of docx files to html...`tput sgr0`   
   echo "Media files will be extracted to ./media"
