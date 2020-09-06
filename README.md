@@ -12,8 +12,9 @@ source _studies/converter_fns.sh && convert_all_docx
 
 Once the markdown is generated, move the generated file to 
 ## Styling and Components
-[Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
-Components: [React-Bootstrap](https://react-bootstrap.netlify.app/components/navs/)
+- Theme and Layout: [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+- Components: [React-Bootstrap](https://react-bootstrap.netlify.app/components/navs/)
+- Icons: [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 # A Next.js starter for the [JAMstack](https://jamstack.org)
 This is a boilerplate for using [Next.js](https://nextjs.org/) as a static site generator.
