@@ -17,24 +17,21 @@ const Home = () => (
       </Container>
     </Jumbotron>
     <Container id='content'>
-      <Row>
-        <h4>Welcome to Inspired Scripture</h4>
-        <p>The purpose of this web site is to equip and encourage believers in Christ to see the relevance of the Old Testament to modern life. Under the inspiration of the Holy Spirit, Paul revealed that every single book of the Old Testament is both “inspired” and also “profitable for teaching, for reproof, for correction, for training in righteousness;” (2 Tim. 3:16). Most believers would profess that the Old Testament is “inspired.” Yet, few would use a book like Leviticus, Numbers or Deuteronomy for “for teaching, for reproof, for correction, for training in righteousness.”</p>
-        <p>Believers in Christ are correctly taught that He fulfilled all of the tests for salvation. Yet, believers are rarely taught how the Old Testament can still be relevant to their walk for reasons unrelated to salvation. Although the list is not all inclusive, these studies seek show how God’s Law and the Old Testament explain how to:</p>
-        <ol>
-          <li>Walk in fellowship with Jesus after finding salvation with Him</li>
-          <li>Maintain God’s standards of holiness as a believer</li>
-          <li>Receive the fullness of Jesus’ intended blessings</li>
-          <li>Be His salt in the wound of sin</li>
-          <li>Celebrate Jesus as He intended during His holy days</li>
-          <li>Defend the Word and having faith in it to share it with others</li>
-          <li>Establish the right relationships and church structure to ensure growth and accountability</li>
-        </ol>
-        <p>Most chapters are separately organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible. </p>
-        <hr />
-      </Row>
+      <h5 className="border-bottom block pb-3">Welcome to Inspired Scripture</h5>
+      <p>The purpose of this web site is to equip and encourage believers in Christ to see the relevance of the Old Testament to modern life. Under the inspiration of the Holy Spirit, Paul revealed that every single book of the Old Testament is both “inspired” and also “profitable for teaching, for reproof, for correction, for training in righteousness;” (2 Tim. 3:16). Most believers would profess that the Old Testament is “inspired.” Yet, few would use a book like Leviticus, Numbers or Deuteronomy for “for teaching, for reproof, for correction, for training in righteousness.”</p>
+      <p>Believers in Christ are correctly taught that He fulfilled all of the tests for salvation. Yet, believers are rarely taught how the Old Testament can still be relevant to their walk for reasons unrelated to salvation. Although the list is not all inclusive, these studies seek show how God’s Law and the Old Testament explain how to:</p>
+      <ol>
+        <li>Walk in fellowship with Jesus after finding salvation with Him</li>
+        <li>Maintain God’s standards of holiness as a believer</li>
+        <li>Receive the fullness of Jesus’ intended blessings</li>
+        <li>Be His salt in the wound of sin</li>
+        <li>Celebrate Jesus as He intended during His holy days</li>
+        <li>Defend the Word and having faith in it to share it with others</li>
+        <li>Establish the right relationships and church structure to ensure growth and accountability</li>
+      </ol>
+      <p>Most chapters are separately organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible. </p>
       <hr />
-      <Row>  
+      <Row>
         <Col xs={6} className="text-center">
           <a href="/topics" className="text-secondary">
             <svg width="2rem" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
