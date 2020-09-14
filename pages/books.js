@@ -4,11 +4,10 @@ import { getAllStudies } from "../lib/studies";
 const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles']
 
 export default function Books({ studiesByBook }) {
-  console.log(studiesByBook)
   return (
     <Layout>
       <Container>
-        <h5 className="border-bottom pb-3">Studies by Book</h5>
+        <h5 className="border-bottom block pb-2 mt-3">Studies by Book</h5>
         <Accordion defaultActiveKey={ORDERED_BOOKS[0]}>
           {
             ORDERED_BOOKS.map((bookName) => {
@@ -36,15 +35,22 @@ export default function Books({ studiesByBook }) {
     if (!studies || studies.length == 0)
       return (<p>Coming soon!</p>)
     return (
-      <ul>
+      <div className='d-flex flex-column flex-wrap' style={{height:'20rem'}}>
         {studies.map((study) => {
           return (
-            <li key={study.chapter}>
-              <a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter} {study.suffix}</a>
-            </li>
+            <div className="pb-1"><a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter}{study.suffix}</a></div>
           )
         })}
-      </ul>
+      </div>
+      // <ul>
+      //   {studies.map((study) => {
+      //     return (
+      //       <li key={study.chapter}>
+      //         <a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter}{study.suffix}</a>
+      //       </li>
+      //     )
+      //   })}
+      // </ul>
     )
   }
 }

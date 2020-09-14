@@ -11,10 +11,9 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
   return (
     <Layout>
       <Container>
-        <div>
-          Study:&nbsp;<a href={"/books#" + study.book}>{study.book}</a> > <a href={"#"}>{study.chapter}</a>
-        </div>
-        <hr />
+        <h5 className="border-bottom block pb-2 mt-3">
+          Study:&nbsp;<a href={"/books#" + study.book}>{study.book}</a> > <a href={"#"}>{study.chapter}{study.suffix}</a>
+        </h5>        
         <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
       </Container>
     </Layout>
