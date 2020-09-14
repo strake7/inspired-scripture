@@ -8,7 +8,8 @@
 function get_convert_cmd {
   fhtml="${1%%.docx}.html" # append html ext           
   fhtml="${fhtml// /-}" # replace space with dash
-  echo "pandoc --self-contained --metadata pagetitle='temporary' \"$1\" -o tmp.html && pandoc tmp.html -o \"$fhtml\"" # we need a standalone html file first to get images encoded as a raw data, then we go back to a shortened html document.  
+  tmp="tmp-$fhtml"
+  echo "pandoc --self-contained --metadata pagetitle='temporary' \"$1\" -o $tmp && pandoc $tmp -o \"$fhtml\"" # we need a standalone html file first to get images encoded as a raw data, then we go back to a shortened html document.  
 }
 
 function convert_all_docx {
@@ -21,7 +22,7 @@ function convert_all_docx {
   done
   wait
   echo "Cleaning up..."
-  rm tmp.html
+  rm tmp-**.html
 }
 
 function convert_single_docx {
@@ -30,7 +31,7 @@ function convert_single_docx {
   echo `tput setaf 4`Running command $cmd`tput sgr0`      
   eval $cmd
   echo "Cleaning up..."
-  rm tmp.html
+  rm tmp-**.html
 }
 
 "$@"
