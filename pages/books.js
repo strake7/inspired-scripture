@@ -1,7 +1,7 @@
 import Layout from "../components/layout"
 import { Container, Accordion, Card, Button } from "react-bootstrap"
 import { getAllStudies } from "../lib/studies";
-const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles']
+const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles']
 
 export default function Books({ studiesByBook }) {
   console.log(studiesByBook)
@@ -14,11 +14,9 @@ export default function Books({ studiesByBook }) {
             ORDERED_BOOKS.map((bookName) => {
               return (
                 <Card>
-                  <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey={bookName}>
-                      {bookName}
-                    </Accordion.Toggle>
-                  </Card.Header>
+                  <Accordion.Toggle as={Card.Header} eventKey={bookName}>
+                    {bookName}
+                  </Accordion.Toggle>
                   <Accordion.Collapse eventKey={bookName}>
                     <Card.Body>
                       {
@@ -42,7 +40,7 @@ export default function Books({ studiesByBook }) {
         {studies.map((study) => {
           return (
             <li key={study.chapter}>
-              <a href={`/studies/${study.slug}`}>{study.book} {study.chapter} {study.suffix}</a>
+              <a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter} {study.suffix}</a>
             </li>
           )
         })}
