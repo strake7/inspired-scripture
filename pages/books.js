@@ -9,7 +9,7 @@ export default function Books({ studiesByBook }) {
     <Layout>
       <Container>
         <h5 className="border-bottom pb-3">Studies by Book</h5>
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey={ORDERED_BOOKS[0]}>
           {
             ORDERED_BOOKS.map((bookName) => {
               return (
