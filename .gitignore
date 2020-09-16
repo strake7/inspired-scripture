@@ -24,5 +24,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# docx files should not be tracked in source control
-*.docx
+# study docx files should not be tracked in source control
+/_studies/**/*.docx
+/_studies/**/*.doc
