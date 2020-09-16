@@ -26,8 +26,8 @@ function convert_all_docx {
 }
 
 function convert_single_docx {
-  echo `tput setaf 3`Starting conversion of $1 files to html...`tput sgr0`     
-  cmd=$(get_convert_cmd $1)
+  echo `tput setaf 3`Starting conversion of $1 files to html...`tput sgr0`    
+  cmd=$(get_convert_cmd "$1")
   echo `tput setaf 4`Running command $cmd`tput sgr0`      
   eval $cmd
   echo "Cleaning up..."
