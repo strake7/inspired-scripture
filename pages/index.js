@@ -9,11 +9,8 @@ const Home = () => (
       <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, background: '#000', opacity: 0.5 }}></div>
       <Container className='text-center text-light' style={{ position: 'relative' }}>
         <h2 className='pb-4'>Biblical studies for the logical mind</h2>
-        <a href='#content' className="text-light">
-          <svg width='2em' height='2em' viewBox='0 0 16 16' className='bi bi-chevron-down' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
-            <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z' />
-          </svg>
-        </a>
+        <i>“All Scripture is inspired by God and profitable for
+teaching, for reproof, for correction, for training in righteousness;” (2 Tim. 3:16.)</i>
       </Container>
     </Jumbotron>
     <Container id='content'>

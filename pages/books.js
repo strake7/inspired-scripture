@@ -7,12 +7,12 @@ export default function Books({ studiesByBook }) {
   return (
     <Layout>
       <Container>
-        <h5 className="border-bottom block pb-2 mt-3">Studies by Book</h5>
+        <h5 className="border-bottom block pb-2 pt-3">Studies by Book</h5>
         <Accordion defaultActiveKey={ORDERED_BOOKS[0]}>
           {
             ORDERED_BOOKS.map((bookName) => {
               return (
-                <Card>
+                <Card key={bookName}>
                   <Accordion.Toggle as={Card.Header} eventKey={bookName}>
                     {bookName}
                   </Accordion.Toggle>
@@ -31,26 +31,17 @@ export default function Books({ studiesByBook }) {
     </Layout>
   )
 
-  function studiesList(studies) {
+  function studiesList(studies) {    
     if (!studies || studies.length == 0)
       return (<p>Coming soon!</p>)
     return (
-      <div className='d-flex flex-column flex-wrap' style={{height:'20rem'}}>
+      <div className='d-flex flex-wrap' >
         {studies.map((study) => {
           return (
-            <div className="pb-1"><a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter}{study.suffix}</a></div>
+            <a key={study.slug} className="p-1" style={{minWidth:'200px'}} href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter}{study.suffix}</a>
           )
         })}
       </div>
-      // <ul>
-      //   {studies.map((study) => {
-      //     return (
-      //       <li key={study.chapter}>
-      //         <a href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter}{study.suffix}</a>
-      //       </li>
-      //     )
-      //   })}
-      // </ul>
     )
   }
 }
