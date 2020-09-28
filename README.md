@@ -1,3 +1,5 @@
+Source code for [inspiredscripture.com](https://inspiredscripture.com/)
+
 # Resources
 ## Generating Study Pages
 John's studies are written as word documents. To best present this material in a web browser the content should be converted to html from docx. To do this use [pandoc](https://pandoc.org/).
