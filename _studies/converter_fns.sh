@@ -16,7 +16,7 @@ function convert_all_docx {
   echo `tput setaf 3`Starting conversion of docx files to html...`tput sgr0`     
   for fdocx in *.docx
   do    
-    cmd=$(get_convert_cmd $fdocx)
+    cmd=$(get_convert_cmd "$fdocx")
     echo `tput setaf 4`Running command $cmd`tput sgr0`      
     eval $cmd &
   done
