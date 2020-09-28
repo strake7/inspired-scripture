@@ -1,18 +1,19 @@
 import Layout from "../components/layout"
 import { Container, Accordion, Card, Button } from "react-bootstrap"
 import { getAllStudies } from "../lib/studies";
+import Heading from "../components/heading";
 const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles']
 
 export default function Books({ studiesByBook }) {
   return (
     <Layout>
       <Container>
-        <h5 className="border-bottom block pb-2 pt-3">Studies by Book</h5>
+        <Heading>Studies by Book</Heading>        
         <Accordion defaultActiveKey={ORDERED_BOOKS[0]}>
           {
             ORDERED_BOOKS.map((bookName) => {
               return (
-                <Card key={bookName}>
+                <Card key={bookName} className="">
                   <Accordion.Toggle as={Card.Header} eventKey={bookName}>
                     {bookName}
                   </Accordion.Toggle>

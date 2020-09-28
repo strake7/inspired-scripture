@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Row, Jumbotron, Container, Col, Card } from 'react-bootstrap';
+import Heading from '../components/heading';
 
 
 const Home = () => (
@@ -14,7 +15,7 @@ teaching, for reproof, for correction, for training in righteousness;” (2 Tim.
       </Container>
     </Jumbotron>
     <Container id='content'>
-      <h5 className="border-bottom block pb-3">Welcome to Inspired Scripture</h5>
+      <Heading>Welcome to Inspired Scripture</Heading>      
       <p>The purpose of this web site is to equip and encourage believers in Christ to see the relevance of the Old Testament to modern life. Under the inspiration of the Holy Spirit, Paul revealed that every single book of the Old Testament is both “inspired” and also “profitable for teaching, for reproof, for correction, for training in righteousness;” (2 Tim. 3:16). Most believers would profess that the Old Testament is “inspired.” Yet, few would use a book like Leviticus, Numbers or Deuteronomy for “for teaching, for reproof, for correction, for training in righteousness.”</p>
       <p>Believers in Christ are correctly taught that He fulfilled all of the tests for salvation. Yet, believers are rarely taught how the Old Testament can still be relevant to their walk for reasons unrelated to salvation. Although the list is not all inclusive, these studies seek show how God’s Law and the Old Testament explain how to:</p>
       <ol>

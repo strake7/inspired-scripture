@@ -5,9 +5,10 @@ export default function Layout({ children }) {
   return (
     <>
       <Meta />
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" sticky="top">
         <Container>
-          <Navbar.Brand href="/" className="text-secondary font-weight-bold">Inspired Scripture</Navbar.Brand>
+          <Navbar.Brand href="/" className="text-secondary           s
+          font-weight-bold">Inspired Scripture</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
