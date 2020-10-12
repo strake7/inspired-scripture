@@ -8,7 +8,7 @@ function Topics({ allTopics }) {
       <Container>
         <Heading>Studies by Topic</Heading>
         <Row>
-          <Col xs={12} sm={5} md={3}>
+          <Col xs={12} sm={5} md={3} className="sidebar">
             <ListGroup>
               {allTopics.map((topic) => (
                 <ListGroup.Item action href={"#" + topic.slug}>
@@ -17,9 +17,6 @@ function Topics({ allTopics }) {
               ))}
             </ListGroup>
           </Col>
-          {/* <Nav defaultActiveKey="" className="flex-column">
-          
-          </Nav> */}
           <Col id="topics-content" xs={12} sm={7} md={9} data-spy="scroll">
             {allTopics.map((topic) => (
               <div id={topic.slug}>
@@ -42,26 +39,6 @@ function Topics({ allTopics }) {
             ))}
           </Col>
         </Row>
-        {/* 
-        <ol>
-          {allTopics.map((topic) => (
-            <li>{topic.name}
-              <ol>
-                {topic.sections.map((section) =>
-                  (
-                    <li>{section.name}
-                      <ol>
-                        {section.studies.map((study) => (
-                          <li><a href={`/studies/${study.slug}`} target="_blank">{study.name}</a></li>
-                        ))}
-                      </ol>
-                    </li>
-                  )
-                )}
-              </ol>
-            </li>
-          ))}
-        </ol> */}
       </Container>
     </Layout>
   )
