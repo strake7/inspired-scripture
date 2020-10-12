@@ -8,7 +8,7 @@ function Topics({ allTopics }) {
       <Container>
         <Heading>Studies by Topic</Heading>
         <Row>
-          <Col xs={12} sm={5} md={3}>
+          <Col xs={12} sm={5} md={3} className="sidebar">
             <ListGroup>
               {allTopics.map((topic) => (
                 <ListGroup.Item action href={"#" + topic.slug}>

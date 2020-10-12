@@ -1,3 +1,11 @@
-.underline{
+.underline {
   text-decoration: underline;
+}
+@media (min-width: 576px) {
+  .sidebar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+  }
 }
