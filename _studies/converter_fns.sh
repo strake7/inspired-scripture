@@ -34,4 +34,14 @@ function convert_single_docx {
   rm tmp-**.html
 }
 
+function remove_chapter_from_name {
+  for f in *-Chapter-*.html
+  do        
+    echo `tput setaf 4`Cleaning '-Chapter-' from $f`tput sgr0`      
+    mv "$f" "${f/-Chapter-/-}"    
+  done
+  wait
+  echo "Done"
+}
+
 "$@"
