@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && next export",
-    "start": "next dev"
+    "start": "next dev",
+    "test": "jest"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -15,5 +16,11 @@
     "react-dom": "16.13.1",
     "yaml": "^1.10.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@types/jest": "^26.0.17",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
 }
