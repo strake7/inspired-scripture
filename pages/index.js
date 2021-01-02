@@ -23,7 +23,7 @@ teaching, for reproof, for correction, for training in righteousness;” (2 Tim.
         <li>Maintain God’s standards of holiness as a believer</li>
         <li>Receive the fullness of Jesus’ intended blessings</li>
         <li>Be His salt in the wound of sin</li>
-        <li>Celebrate Jesus as He intended during His holy days</li>
+        <li>Trust in God’s sovereignty and faithfulness</li>
         <li>Defend the Word and having faith in it to share it with others</li>
         <li>Establish the right relationships and church structure to ensure growth and accountability</li>
       </ol>
