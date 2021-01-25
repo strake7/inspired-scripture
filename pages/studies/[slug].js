@@ -10,7 +10,7 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
   }
   return (
     <Layout>
-      <Container>
+      <Container className="study-content">
         {study.book &&
           <h5>
             Study:&nbsp;<a href={"/books#" + study.book}>{study.book}</a> / <a href={"#"}>{study.chapter}&nbsp;{study.suffix}</a>
