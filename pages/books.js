@@ -52,6 +52,11 @@ export async function getStaticProps({ params }) {
   //group and warn missing  
   var studiesByBook = allStudies.reduce((rv, x) => {
     const book = x.book;
+    if(!book){      
+      console.debug(`Ignoring ${x.slug} - no book value defined`);
+      return rv
+    }
+
     if (!ORDERED_BOOKS.includes(book))
       console.warn(`Book ${book} is not recognized and will be ignored from the study list.`)
     if (rv[book])
