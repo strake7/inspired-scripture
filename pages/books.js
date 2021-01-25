@@ -8,8 +8,8 @@ export default function Books({ studiesByBook }) {
   return (
     <Layout>
       <Container>
-        <Heading>Studies by Book</Heading>        
-        <Accordion defaultActiveKey={ORDERED_BOOKS[0]}>
+        <Heading>Studies by Book</Heading>
+        <Accordion defaultActiveKey={ORDERED_BOOKS[0]} className="pb-4">
           {
             ORDERED_BOOKS.map((bookName) => {
               return (
@@ -32,14 +32,14 @@ export default function Books({ studiesByBook }) {
     </Layout>
   )
 
-  function studiesList(studies) {    
+  function studiesList(studies) {
     if (!studies || studies.length == 0)
       return (<p>Coming soon!</p>)
     return (
-      <div className='d-flex flex-wrap ' >
+      <div className='d-flex flex-wrap'>
         {studies.map((study) => {
           return (
-            <a key={study.slug} className="p-1" style={{minWidth:'200px', textAlign:'center'}} href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter} {study.suffix}</a>
+            <a key={study.slug} className="p-1" style={{ minWidth: '200px', textAlign: 'center' }} href={`/studies/${study.slug}`} target="_blank">{study.book} {study.chapter} {study.suffix}</a>
           )
         })}
       </div>
