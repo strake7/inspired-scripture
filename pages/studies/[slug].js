@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Layout from "../../components/layout";
 import { getStudyBySlug, getAllStudies } from "../../lib/studies";
 import { Container, Row as div } from "react-bootstrap";
+import Heading from '../../components/heading';
 
 export default function Study({ study = { slug, book, chapter, suffix, content } }) {
   const router = useRouter()
@@ -12,9 +13,9 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
     <Layout>
       <Container className="study-content">
         {study.book &&
-          <h5>
+          <Heading>
             Study:&nbsp;<a href={"/books#" + study.book}>{study.book}</a> / <a href={"#"}>{study.chapter}&nbsp;{study.suffix}</a>
-          </h5>
+          </Heading>
         }
         <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
       </Container>
