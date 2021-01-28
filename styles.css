@@ -11,10 +11,13 @@
 }
 .study-content th, td {
   border: 1px solid black;
-  padding: 0 10px 0 10px
+  padding: 0 1em 0 1em
 }
 .study-content strong {
   /* The source docx files from which the study content was rendered contains various text formatting issues where font weight is interpreted as bold. Rather than address many docx files text formatting we decided to ignore strong tags in the study content for the meantime */
   font-weight: normal;
+}
+.study-content a{
+  word-wrap: break-word;
 }
 
