@@ -9,6 +9,9 @@
     height: calc(100vh - 4rem);
   }
 }
+.study-content{
+  overflow: scroll;
+}
 .study-content th, td {
   border: 1px solid black;
   padding: 0 1em 0 1em

@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Row, Jumbotron, Container, Col, Card } from 'react-bootstrap';
+import { Row, Jumbotron, Container, Col } from 'react-bootstrap';
 import Heading from '../components/heading';
-
 
 const Home = () => (
   <Layout>
