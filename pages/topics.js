@@ -28,7 +28,7 @@ function Topics({ allTopics }) {
                         <h5>{section.name}</h5>
                         <ol>
                           {section.studies.map((study) => (
-                            <li><a href={`/studies/${study.slug}`} target="_blank">{study.name}</a></li>
+                            <li><a href={`/studies/${study.slug}`}>{study.name}</a></li>
                           ))}
                         </ol>
                       </div>
