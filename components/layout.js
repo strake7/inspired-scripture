@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
-              <Nav.Link href="/about" activeClassName="active">About</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/topics">Studies By Topic</Nav.Link>
               <Nav.Link href="/books">Studies By Book</Nav.Link>
             </Nav>
