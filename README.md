@@ -1,6 +1,6 @@
 Source code for [inspiredscripture.com](https://inspiredscripture.com/)
 ## Getting Started
-This site is build using using [Next.js](https://nextjs.org/) as a static site generator. You can read more about building sites and apps with Next.js in their documentation at https://nextjs.org/docs. To get started ensure you have the latest of npm and nodejs installed, clone this repository and run `npm install`. Once the dependencies are installed you can run `npm start` to run the site locally. Visit http://localhost:3000/ to preview your new website. The Next.js development server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
+This site is build using using [Next.js](https://nextjs.org/) as a static site generator. You can read more about building sites and apps with Next.js in their documentation at https://nextjs.org/docs. To get started ensure you have the latest of npm and nodejs installed, clone this repository and run `npm install`. Once the dependencies are installed you can run `npm start` to run the site locally. Visit http://localhost:3000/ to preview the site. The Next.js development server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
 
 ## Tests
 Automated tests may be run using the `npm test` command.
