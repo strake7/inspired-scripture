@@ -10,7 +10,7 @@
   }
 }
 .study-content{
-  overflow: scroll;
+  overflow-x: auto;
 }
 .study-content th, td {
   border: 1px solid black;
