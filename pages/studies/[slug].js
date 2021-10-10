@@ -11,7 +11,7 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
   }
   return (
     <Layout>
-      <Container class className="study-content">
+      <Container className="study-content">
         {
           <div className="d-print-none">
             <Heading >
