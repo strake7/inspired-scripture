@@ -6,7 +6,7 @@ function Topics({ allTopics }) {
   return (
     <Layout>
       <Container>
-        <Heading>Studies by Topic</Heading>
+        <Heading>Bible Studies by Topic</Heading>
         <Row>
           <Col xs={12} sm={5} md={3} className="sidebar">
             <ListGroup>

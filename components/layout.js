@@ -13,8 +13,8 @@ export default function Layout({ children }) {
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
               <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/topics">Studies By Topic</Nav.Link>
-              <Nav.Link href="/books">Studies By Book</Nav.Link>
+              <Nav.Link href="/topics">Bible Studies By Topic</Nav.Link>
+              <Nav.Link href="/books">Bible Studies By Book</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
