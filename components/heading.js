@@ -1,5 +1,7 @@
 export default function Heading({ children }){
   return (
-    <h5 className="pb-2 pt-2">{children}</h5>
+    <>
+      <h1 className="h5 pt-2">{children}</h1>
+    </>
   )
 }
