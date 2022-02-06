@@ -8,7 +8,7 @@ export default function Books({ studiesByBook }) {
   return (
     <Layout>
       <Container>
-        <Heading>Studies by Book</Heading>
+        <Heading>Bible Studies by Book</Heading>
         <Accordion defaultActiveKey={ORDERED_BOOKS[0]} className="pb-4">
           {
             ORDERED_BOOKS.map((bookName) => {
