@@ -10,7 +10,7 @@ function Topics({ allTopics }) {
         <Heading>Bible Studies by Topic</Heading>
         <Row>
           {allTopics.map((topic) => (
-            <Col md={6} xl={4}>
+            <Col md={6} xl={4} key={topic.name}>
               <a href={"/topics/" + topic.slug} className="text-dark">
                 <Card className="text-center mb-3">
                   <Card.Body>

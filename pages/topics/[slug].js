@@ -17,11 +17,11 @@ export default function Study({ topic = { slug, name, sections } }) {
         </Heading>
         <Row>
           {topic.sections.map((section) => (
-            <Col sm={12} md={6}>
+            <Col sm={12} md={6} key={section.name}>
               <h6 className='h6'>{section.name}</h6>
               <ol>
                 {section.studies.map((study) => (
-                  <li><a href={`/studies/${study.slug}`}>{study.name}</a></li>
+                  <li key={study.slug}><a href={`/studies/${study.slug}`}>{study.name}</a></li>
                 ))}
               </ol>
             </Col>
