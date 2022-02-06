@@ -20,8 +20,8 @@ export default function Study({ topic = { slug, name, sections } }) {
             <Col sm={12} md={6} key={section.name}>
               <h6 className='h6'>{section.name}</h6>
               <ol>
-                {section.studies.map((study) => (
-                  <li key={study.slug}><a href={`/studies/${study.slug}`}>{study.name}</a></li>
+                {section.studies.map((study, i) => (
+                  <li key={study.slug + i}><a href={`/studies/${study.slug}`}>{study.name}</a></li>
                 ))}
               </ol>
             </Col>

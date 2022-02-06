@@ -1,10 +1,12 @@
 import { Container, Row, Nav, Navbar } from "react-bootstrap"
 import Meta from './meta'
+import Scripts from "./scripts"
 
 export default function Layout({ children }) {
   return (
     <>
       <Meta />
+      <Scripts />
       <Navbar bg="light" expand="lg" sticky="top" style={{ borderBottom: '1px solid #ddd'}}>
         <Container>
           <Navbar.Brand href="/" className="text-secondary           s
