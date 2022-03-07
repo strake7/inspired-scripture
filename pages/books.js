@@ -9,13 +9,15 @@ export default function Books({ studiesByBook }) {
     <Layout>
       <Container>
         <Heading>Bible Studies by Book</Heading>
-        <Accordion defaultActiveKey={ORDERED_BOOKS[0]} className="pb-4">
+        <Accordion className="pb-4">
           {
             ORDERED_BOOKS.map((bookName) => {
               return (
                 <Card key={bookName} className="">
                   <Accordion.Toggle as={Card.Header} eventKey={bookName}>
-                    {bookName}
+                    <a href={'#' + bookName}>
+                      {bookName}
+                    </a>
                   </Accordion.Toggle>
                   <Accordion.Collapse eventKey={bookName}>
                     <Card.Body>
@@ -52,7 +54,7 @@ export async function getStaticProps({ params }) {
   //group and warn missing  
   var studiesByBook = allStudies.reduce((rv, x) => {
     const book = x.book;
-    if(!book){      
+    if (!book) {
       console.debug(`Ignoring ${x.slug} - no book value defined`);
       return rv
     }
