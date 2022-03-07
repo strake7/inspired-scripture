@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
 import Layout from "../../components/layout";
 import { getStudyBySlug, getAllStudies } from "../../lib/studies";
-import { Container, Row as div } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Heading from '../../components/heading';
+import ErrorPage from 'next/error'
 
 export default function Study({ study = { slug, book, chapter, suffix, content } }) {
   const router = useRouter()
