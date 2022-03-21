@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { getAllTopics, getTopicBySlug } from "../../lib/topics";
 import { Container, Row, Col } from "react-bootstrap";
 import Heading from '../../components/heading';
+import ErrorPage from 'next/error'
 
 export default function Study({ topic = { slug, name, sections } }) {
   const router = useRouter()
