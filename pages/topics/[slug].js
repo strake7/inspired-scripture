@@ -22,7 +22,7 @@ export default function Study({ topic = { slug, name, sections } }) {
               <h6 className='h6'>{section.name}</h6>
               <ol>
                 {section.studies.map((study, i) => (
-                  <li key={study.slug + i}><a href={`/studies/${study.slug}`}>{study.name}</a></li>
+                  <li key={study.slug + i}><a href={`/bible-studies/${study.slug}`}>{study.name}</a></li>
                 ))}
               </ol>
             </Col>

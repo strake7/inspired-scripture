@@ -41,7 +41,7 @@ export default function Books({ studiesByBook }) {
       <div className='d-flex flex-wrap'>
         {studies.map((study) => {
           return (
-            <a key={study.slug} className="p-1" style={{ minWidth: '200px', textAlign: 'center' }} href={`/studies/${study.slug}`}>{study.book} {study.chapter} {study.suffix}</a>
+            <a key={study.slug} className="p-1" style={{ minWidth: '200px', textAlign: 'center' }} href={`/bible-studies/${study.slug}`}>{study.book} {study.chapter} {study.suffix}</a>
           )
         })}
       </div>
