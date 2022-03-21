@@ -10,8 +10,9 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
   if (!router.isFallback && !study?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  const studyName = `${study.book} ${study.chapter} ${study.suffix}`
   return (
-    <Layout>
+    <Layout meta={{ title: `Bible Study: ${studyName}`, description: `John Edson's commentary on ${studyName} in a seven fold outline.` }}>
       <Container className="study-content">
         {
           <div className="d-print-none">

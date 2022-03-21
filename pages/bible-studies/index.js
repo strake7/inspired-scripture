@@ -6,7 +6,7 @@ const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy
 
 export default function Books({ studiesByBook }) {
   return (
-    <Layout>
+    <Layout meta={{ title: "Bible Studies by Book", description:"John Edson's bible studies and commentary grouped sequentially by old testament book."}} >
       <Container>
         <Heading>Bible Studies by Book</Heading>
         <Accordion className="pb-4">

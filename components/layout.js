@@ -2,15 +2,14 @@ import { Container, Row, Nav, Navbar } from "react-bootstrap"
 import Meta from './meta'
 import Scripts from "./scripts"
 
-export default function Layout({ children }) {
+export default function Layout({ children, meta = { title, description } }) {
   return (
     <>
-      <Meta />
+      <Meta title={meta.title} description={meta.description} />
       <Scripts />
-      <Navbar bg="light" expand="lg" sticky="top" style={{ borderBottom: '1px solid #ddd'}}>
+      <Navbar bg="light" expand="lg" sticky="top" style={{ borderBottom: '1px solid #ddd' }}>
         <Container>
-          <Navbar.Brand href="/" className="text-secondary           s
-          font-weight-bold">Inspired Scripture</Navbar.Brand>
+          <Navbar.Brand href="/" className="text-secondary font-weight-bold">Inspired Scripture</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>

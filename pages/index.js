@@ -5,7 +5,7 @@ import Heading from '../components/heading';
 import Link from 'next/link';
 
 const Home = () => (
-  <Layout>
+  <Layout meta={{ title: "Inspired Scripture", description: "Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ."}}>
     <Jumbotron className="text-white" style={{ position: 'relative', backgroundSize: 'cover', backgroundImage: 'url(/welcome-span.jpg)', backgroundPosition: 'center' }}>
       <div style={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, background: '#000', opacity: 0.5 }}></div>
       <Container className='text-center text-light' style={{ position: 'relative' }}>

@@ -4,7 +4,7 @@ import Heading from '../components/heading';
 
 export default function About(props) {
 return(
-  <Layout>
+  <Layout meta={{title:"About", description:"About inspiredscripture.com."}}>
     <Container>
       <Heading className="border-bottom pb-4 pt-3">About</Heading>
       <p>Thank you for your interest in <a href="https://inspiredscripture.com">inspiredscripture.com</a>. More information is coming soon about this site.</p>

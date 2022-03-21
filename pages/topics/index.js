@@ -4,10 +4,11 @@ import { getAllTopics } from "../../lib/topics";
 import Heading from "../../components/heading";
 
 function Topics({ allTopics }) {
+  const title = 'Bible Studies by Topic'
   return (
-    <Layout>
+    <Layout meta={{ title, description: "John Edson's bible studies and commentary organized by spirtual topics." }}>
       <Container>
-        <Heading>Bible Studies by Topic</Heading>
+        <Heading>{title}</Heading>
         <Row>
           {allTopics.map((topic) => (
             <Col md={6} xl={4} key={topic.name}>
