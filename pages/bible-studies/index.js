@@ -1,12 +1,12 @@
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { Container, Accordion, Card, Button } from "react-bootstrap"
-import { getAllStudies } from "../lib/studies";
-import Heading from "../components/heading";
+import { getAllStudies } from "../../lib/studies";
+import Heading from "../../components/heading";
 const ORDERED_BOOKS = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job']
 
 export default function Books({ studiesByBook }) {
   return (
-    <Layout>
+    <Layout meta={{ title: "Bible Studies by Book", description:"John Edson's bible studies and commentary grouped sequentially by old testament book."}} >
       <Container>
         <Heading>Bible Studies by Book</Heading>
         <Accordion className="pb-4">
@@ -41,7 +41,7 @@ export default function Books({ studiesByBook }) {
       <div className='d-flex flex-wrap'>
         {studies.map((study) => {
           return (
-            <a key={study.slug} className="p-1" style={{ minWidth: '200px', textAlign: 'center' }} href={`/studies/${study.slug}`}>{study.book} {study.chapter} {study.suffix}</a>
+            <a key={study.slug} className="p-1" style={{ minWidth: '200px', textAlign: 'center' }} href={`/bible-studies/${study.slug}`}>{study.book} {study.chapter} {study.suffix}</a>
           )
         })}
       </div>

@@ -10,11 +10,12 @@ export default function Study({ topic = { slug, name, sections } }) {
   if (!router.isFallback && !topic?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  const title = `Bible Study Topic: ${topic.name}`
   return (
-    <Layout>
+    <Layout meta={{ title, description: `John Edson's bible studies and commentary concerning ${topic.name}.` }}>
       <Container className="study-content">
         <Heading>
-          Bible Study Topic:&nbsp;{topic.name}
+          {title}
         </Heading>
         <Row>
           {topic.sections.map((section) => (
@@ -22,7 +23,7 @@ export default function Study({ topic = { slug, name, sections } }) {
               <h6 className='h6'>{section.name}</h6>
               <ol>
                 {section.studies.map((study, i) => (
-                  <li key={study.slug + i}><a href={`/studies/${study.slug}`}>{study.name}</a></li>
+                  <li key={study.slug + i}><a href={`/bible-studies/${study.slug}`}>{study.name}</a></li>
                 ))}
               </ol>
             </Col>
