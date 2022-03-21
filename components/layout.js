@@ -16,7 +16,7 @@ export default function Layout({ children }) {
             <Nav>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/topics">Bible Studies By Topic</Nav.Link>
-              <Nav.Link href="/books">Bible Studies By Book</Nav.Link>
+              <Nav.Link href="/bible-studies">Bible Studies By Book</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
