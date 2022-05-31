@@ -11,14 +11,14 @@ export default function About(props) {
         <p>Believers in Christ are correctly taught that He fulfilled all of the tests for salvation. Yet, believers are rarely taught how the Old Testament can still be relevant to their walk for reasons unrelated to salvation. Although the list is not all inclusive, these studies seek show how God's Law and the Old Testament explain how to:</p>
         <ol>
           <li>Walk in fellowship with Jesus after finding salvation with Him</li>
-          <li>Maintain God’s standards of holiness as a believer</li>
-          <li>Receive the fullness of Jesus’ intended blessings</li>
+          <li>Maintain God's standards of holiness as a believer</li>
+          <li>Receive the fullness of Jesus' intended blessings</li>
           <li>Be His salt in the wound of sin</li>
-          <li>Trust in God’s sovereignty and faithfulness</li>
+          <li>Trust in God's sovereignty and faithfulness</li>
           <li>Defend the Word and having faith in it to share it with others</li>
           <li>Establish the right relationships and church structure to ensure growth and accountability</li>
         </ol>
-        <p>Most chapters are separately organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible. </p>
+        <p>Most chapters are separately organized into at least seven lessons. Based upon Paul's teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible. </p>
         <p>This site is developed openly. If you have corrections and enhancements you would like to report or make please see <a href="https://github.com/strake7/inspired-scripture" target="_blank" rel="noreferrer">the repository on GitHub</a>.</p>
         <p>
           Thank you for your interest in <a href="https://inspiredscripture.com">inspiredscripture.com</a>.
