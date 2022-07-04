@@ -1,5 +1,5 @@
 import Layout from "../../components/layout"
-import { Container, Accordion, Card, Button } from "react-bootstrap"
+import { Container, ListGroup, Col, Row } from "react-bootstrap"
 import { getAllStudies } from "../../lib/studies";
 import Heading from "../../components/heading";
 import { ORDERED_BOOKS } from "../../lib/books";
@@ -7,35 +7,45 @@ import { useRouter } from "next/router";
 
 export default function Books({ studiesByBook }) {
   const route = useRouter()
-  const defaultActiveBook = route.query.book // TODO: This isn't working.
+  if (!route.isReady)
+    return null;
+  const defaultActiveKey = parseRouteForDefaultBookKey(route) ?? "#" + ORDERED_BOOKS[0];
   return (
     <Layout meta={{ title: "Bible Studies by Book", description: "John Edson's bible studies and commentary grouped sequentially by old testament book." }} >
       <Container>
         <Heading>Bible Studies by Book</Heading>
-        <Accordion className="pb-4" defaultActiveKey={defaultActiveBook}>
-          {
-            ORDERED_BOOKS.map((bookName) => {
-              return (
-                <Card key={bookName} className="">
-                  <Accordion.Toggle as={Card.Header} eventKey={bookName}>
-                    <a href={'#' + bookName}>
-                      {bookName}
-                    </a>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey={bookName}>
-                    <Card.Body>
-                      {
-                        studiesList(studiesByBook[bookName])
-                      }
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-              )
-            })}
-        </Accordion>
+        <Row>
+          <Col sm={3}>
+            <div className="sidebar">
+              <ListGroup defaultActiveKey={defaultActiveKey} variant="flush">
+                {
+                  ORDERED_BOOKS.map((bookName) => (
+                    <ListGroup.Item action href={"#" + bookName} key={bookName}>{bookName}</ListGroup.Item>
+                  ))
+                }
+              </ListGroup>
+            </div>
+          </Col>
+          <Col sm={9}>
+            {ORDERED_BOOKS.map((bookName) => (
+              <section id={bookName} key={bookName}>
+                <h2 className="h5 mt-2">{bookName}</h2>
+                <hr />
+                {studiesList(studiesByBook[bookName])}
+              </section>
+            ))}
+          </Col>
+        </Row>
       </Container>
-    </Layout>
+    </Layout >
   )
+
+  function parseRouteForDefaultBookKey(route) {
+    const matches = decodeURI(route.asPath).match('#.*$');
+    if (!matches) return null;
+
+    return matches[0];
+  }
 
   function studiesList(studies) {
     if (!studies || studies.length == 0)
