@@ -15,7 +15,7 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
     study.videoSrc
       ? (
         <div className="video">
-          <iframe width="560" height="315" src={study.videoSrc} title="Inspired Scripture YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe width="560" height="315" src={study.videoSrc} title={study.slug + " Study Video"} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       )
       : null;
