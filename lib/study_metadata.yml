@@ -1,9 +1,9 @@
 # Metadata to decorate studies. Use slug for key
-Job-1:
+job-1:
   videoSrc: https://www.youtube.com/embed/bJ-FjaHcetk
-Job-2:
+job-2:
   videoSrc: https://www.youtube.com/embed/HX6U30ZjE7Y
-Job-3:
+job-3:
   videoSrc: https://www.youtube.com/embed/bUCWJAnaXqQ
-Job-4:
+job-4:
   videoSrc: https://www.youtube.com/embed/iL7L5LViFEA
