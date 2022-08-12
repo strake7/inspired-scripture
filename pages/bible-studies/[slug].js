@@ -5,12 +5,11 @@ import { Container } from "react-bootstrap";
 import Heading from '../../components/heading';
 import ErrorPage from 'next/error'
 
-export default function Study({ study = { slug, book, chapter, suffix, content } }) {
+export default function Study({ study = { slug, book, chapter, suffix, content, title } }) {
   const router = useRouter()
   if (!router.isFallback && !study?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  const studyName = `${study.book} ${study.chapter} ${study.suffix}`
   const renderStudyVideo = () =>
     study.videoSrc
       ? (
@@ -21,11 +20,11 @@ export default function Study({ study = { slug, book, chapter, suffix, content }
       : null;
 
   return (
-    <Layout meta={{ title: `Bible Study: ${studyName}`, description: `John Edson's commentary on ${studyName} in a seven fold outline.` }}>
+    <Layout meta={{ title: study.title, description: study.description }}>
       <Container className="study-content">
         <div className="d-print-none">
           <Heading >
-            Bible Study:&nbsp;<a href={"/bible-studies#" + study.book}>{study.book}</a> / <a href={"#"}>{study.chapter}&nbsp;{study.suffix}</a>
+            {study.title}
             <a href="#" onClick={() => window.print()}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-printer" viewBox="0 0 16 16">
                 <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
