@@ -1,6 +1,12 @@
 html {
   scroll-padding-top: 4rem;
 }
+h1 {
+  font-size: 1.25em;
+}
+h2, h3 {
+  font-size: 1.15em;
+}
 .underline {
   text-decoration: underline;
 }

@@ -6,6 +6,5 @@ topic warning if doc does not exist
 3. robots
 get rid of suffix and use verse / section
 
-Start on topics JSON file
 
 

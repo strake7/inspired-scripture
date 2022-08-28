@@ -39,14 +39,14 @@ export default function Layout({ children, meta = { title, description } }) {
             <Nav>
               <Nav.Link href="/about">About</Nav.Link>
               <NavDropdown title="Bible Studies by Topic">
-                <NavDropdown.Item href="/topics/">Browse All</NavDropdown.Item>
+                <NavDropdown.Item href="/#topics">Browse All</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {navTopics.map((topic) => (
                   <NavDropdown.Item href={"/topics/" + topic.replaceAll(' ', '-').toLowerCase()} key={topic} >{topic}</NavDropdown.Item>
                 ))}
               </NavDropdown>
               <NavDropdown title="Bible Studies by Book">
-                <NavDropdown.Item href="/bible-studies/">Browse All</NavDropdown.Item>
+                <NavDropdown.Item href="/#bible-studies">Browse All</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {ORDERED_BOOKS.map((book) => (
                   <NavDropdown.Item href={"/bible-studies/#" + book} key={book} >{book}</NavDropdown.Item>)
