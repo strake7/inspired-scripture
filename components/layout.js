@@ -1,7 +1,6 @@
 import { Container, Row, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import Meta from './meta'
 import Scripts from "./scripts"
-import { ORDERED_BOOKS } from "../lib/books";
 
 export default function Layout({ children, meta = { title, description } }) {
   /** Intentional debt: This is  duplicated from getAllTopics(); it would be
@@ -47,6 +46,7 @@ export default function Layout({ children, meta = { title, description } }) {
     Nehemiah: 'nehemiah-1',
     Esther: 'esther-1',
     Job: 'job-1',
+    Psalm: 'psalm-1',
   }
 
 
