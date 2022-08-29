@@ -6,8 +6,9 @@ import { ORDERED_BOOKS } from "../lib/books";
 export default function Layout({ children, meta = { title, description } }) {
   /** Intentional debt: This is  duplicated from getAllTopics(); it would be
     * nice to source this information from a single location however, at this
-    * time, nextjs layouts do not support getStaticProps.
-    * https://nextjs.org/docs/basic-features/layouts.
+    * time, nextjs layouts do not support getStaticProps. We can fix this in 
+    * future versions of nextjs
+    * https://nextjs.org/blog/layouts-rfc#layout-and-page-behavior
   */
   const navTopics = [
     'Faith',
@@ -26,6 +27,28 @@ export default function Layout({ children, meta = { title, description } }) {
     'End Times',
     'Sin'
   ]
+  const navBooks =
+  {
+    Genesis: 'genesis-1.1-8',
+    Exodus: 'exodus-1',
+    Leviticus: 'leviticus-1',
+    Numbers: 'numbers-1.1-4',
+    Deuteronomy: 'deuteronomy-1',
+    Joshua: 'joshua-1',
+    Judges: 'judges-1',
+    Ruth: 'ruth-1',
+    '1 Samuel': '1-samuel-1',
+    '2 Samuel': '2-samuel-1',
+    '1 Kings': '1-kings-1',
+    '2 Kings': '2-kings-1',
+    '1 Chronicles': '1-chronicles-1',
+    '2 Chronicles': '2-chronicles-1',
+    Ezra: 'ezra-1',
+    Nehemiah: 'nehemiah-1',
+    Esther: 'esther-1',
+    Job: 'job-1',
+  }
+
 
   return (
     <>
@@ -48,8 +71,8 @@ export default function Layout({ children, meta = { title, description } }) {
               <NavDropdown title="Bible Studies by Book">
                 <NavDropdown.Item href="/#bible-studies">Browse All</NavDropdown.Item>
                 <NavDropdown.Divider />
-                {ORDERED_BOOKS.map((book) => (
-                  <NavDropdown.Item href={"/bible-studies/#" + book} key={book} >{book}</NavDropdown.Item>)
+                {Object.keys(navBooks).map((k) => (
+                  <NavDropdown.Item href={"/bible-studies/" + navBooks[k]} key={k} >{k}</NavDropdown.Item>)
                 )}
               </NavDropdown>
             </Nav>
