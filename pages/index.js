@@ -19,7 +19,7 @@ const Home = ({ allTopics, studiesByBook }) => (
     </Jumbotron>
     <Container id='content'>
       <Heading>Welcome to Inspired Scripture</Heading>
-      <p className='mb-4'>This is a place of study with content intended to equip and encourage you as a believer in Christ to see the relevance of the Old Testament in modern life. Studies are organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible.</p>
+      <p className='mb-5'>This is a place of study with content intended to equip and encourage you as a believer in Christ to see the relevance of the Old Testament in modern life. Studies are organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible.</p>
       <Row>
         <Col xs={6} className="text-center">
           <Link href="#topics">
@@ -48,7 +48,7 @@ const Home = ({ allTopics, studiesByBook }) => (
           </Link>
         </Col>
       </Row>
-      <hr className='mt-lg-5 mb-lg-5' />
+      <hr className='mt-sm-5 mb-sm-5' />
       <h2 id='topics'>Bible Studies by Topic</h2>
       <Row>
         {allTopics.map((topic) => (
@@ -72,7 +72,7 @@ const Home = ({ allTopics, studiesByBook }) => (
           </Col>
         ))}
       </Row>
-      <hr className='mt-lg-5 mb-lg-5' />
+      <hr className='mt-sm-5 mb-sm-5' />
       <h2 id="bible-studies">Bible Studies by Book</h2>
       <Row>
         <Col sm={3}>
