@@ -13,7 +13,7 @@ export default function Study({ topic = { slug, name, sections } }) {
   const title = `Bible Study Topic: ${topic.name}`
   return (
     <Layout meta={{ title, description: `John Edson's bible studies and commentary concerning ${topic.name}.` }}>
-      <Container className="study-content">
+      <Container className="study-content pt-2">
         <Heading>
           {title}
         </Heading>
