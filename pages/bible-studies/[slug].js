@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Layout from "../../components/layout";
 import { getStudyBySlug, getAllStudies } from "../../lib/studies";
-import { Button, ButtonGroup, Col, Container, Dropdown, DropdownButton, Jumbotron, Row } from "react-bootstrap";
+import { Button, ButtonGroup, Container, Dropdown, DropdownButton } from "react-bootstrap";
 import Heading from '../../components/heading';
 import ErrorPage from 'next/error'
 
