@@ -28,7 +28,7 @@ export default function Layout({ children, meta = { title, description } }) {
   ]
   const navBooks =
   {
-    Genesis: 'genesis-1.1-8',
+    Genesis: 'genesis-1a.1',
     Exodus: 'exodus-1',
     Leviticus: 'leviticus-1',
     Numbers: 'numbers-1.1-4',
