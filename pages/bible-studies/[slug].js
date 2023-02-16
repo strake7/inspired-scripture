@@ -60,7 +60,7 @@ export default function Study({ study, studiesForBook }) {
                 </ul> */}
           </div>
           <Heading>
-            {study.title}
+            {study.heading}
           </Heading>
           {renderStudyVideo()}
         </div>
