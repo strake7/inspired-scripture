@@ -60,9 +60,8 @@ export default function Study({ study, studiesForBook }) {
                 </ul> */}
           </div>
           <Heading>
-            {study.heading}
+            {study.title}
           </Heading>
-          <small>{study.book + ' ' + study.chapterLabel}</small>
           {renderStudyVideo()}
         </div>
         <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
