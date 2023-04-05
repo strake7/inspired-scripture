@@ -15,10 +15,17 @@ function get_convert_cmd {
 
 function convert_all_docx {
   echo $(tput setaf 3)Starting conversion of docx files to html...$(tput sgr0)
+  i=0
+  batch_size=20
   for fdocx in *.docx; do
     cmd=$(get_convert_cmd "$fdocx")
     echo $(tput setaf 4)Running command $cmd$(tput sgr0)
     eval $cmd &
+    ((i=i+1))
+    if [ $(expr $i % $batch_size) = "0" ]; then
+      echo $(tput setaf 5)Waiting for batch of $batch_size to complete...$(tput sgr0)
+      wait
+    fi
   done
   wait
   echo "Cleaning up..."
