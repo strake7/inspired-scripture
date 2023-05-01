@@ -6,11 +6,15 @@
 # for any docx file within the _studies directory, convert to html using pandoc
 
 function get_convert_cmd {
-  fhtml="${1%%.docx}.html"                             # append html ext
-  fhtml="${fhtml// /-}"                                # replace space with dash
-  fhtml=$(echo "$fhtml" | awk '{ print tolower($1) }') # lowercase name for slugs
+  name="${1%%.docx}"                                #  remove .docx ext
+  name="${name// /-}"                               #  replace space with dash
+  name="$(echo $name | tr '[:upper:]' '[:lower:]')" #  lowercase name for slugs
+  fhtml="${name}.html"                              #  append html ext
   tmp="tmp-$fhtml"
-  echo "pandoc --self-contained --metadata pagetitle='temporary' \"$1\" -o $tmp && pandoc $tmp -o \"$fhtml\"" # we need a standalone html file first to get images encoded as a raw data, then we go back to a shortened html document.
+  # convert, clean image path and remove temp file
+  echo "pandoc --extract-media='../public/${name}' --metadata
+  pagetitle='temporary'  \"$1\" -o $tmp && pandoc $tmp -o \"$fhtml\"
+  && clean_image_paths \"$fhtml\" && rm $tmp" | tr -d '\n\r'
 }
 
 function convert_all_docx {
@@ -28,8 +32,6 @@ function convert_all_docx {
     fi
   done
   wait
-  echo "Cleaning up..."
-  rm tmp-**.html
 }
 
 function convert_single_docx {
@@ -37,8 +39,6 @@ function convert_single_docx {
   cmd=$(get_convert_cmd "$1")
   echo $(tput setaf 4)Running command $cmd$(tput sgr0)
   eval $cmd
-  echo "Cleaning up..."
-  rm tmp-**.html
 }
 
 function remove_chapter_from_name {
@@ -50,4 +50,12 @@ function remove_chapter_from_name {
   echo "Done"
 }
 
-"$@"
+function clean_image_paths {
+  # The nature of the extract-medias flag in pandoc is that it inserts
+  # files with the "../public" path. Let's remove that.
+  echo $(tput setaf 4)Cleaning image paths in $1$(tput sgr0)
+  sed -i '' 's/\.\.\/public//g' "$1"
+  wait
+}
+
+$@"
