@@ -11,8 +11,10 @@ function get_convert_cmd {
   name="$(echo $name | tr '[:upper:]' '[:lower:]')" #  lowercase name for slugs
   fhtml="${name}.html"                              #  append html ext
   tmp="tmp-$fhtml"
-  # convert, clean image path and remove temp file
-  echo "pandoc --extract-media='../public/${name}' --metadata
+  # 1. Clear existing public images to make room
+  # 2. Convert the study from docx to hmtl while extracting images
+  # 3. Clean up the image paths in the html file
+  echo "rm -rf ../public/${name} && pandoc --extract-media='../public/${name}' --metadata
   pagetitle='temporary'  \"$1\" -o $tmp && pandoc $tmp -o \"$fhtml\"
   && clean_image_paths \"$fhtml\" && rm $tmp" | tr -d '\n\r'
 }
@@ -58,4 +60,28 @@ function clean_image_paths {
   wait
 }
 
-$@"
+# function get_convert_html_cmd {
+#   name="${1%%.html}"                           
+#   tmp="tmp-$fhtml"
+#   # convert, clean image path and remove temp file
+#   echo "rm -rf ../public/${name} || true && pandoc --extract-media='../public/${name}' --metadata pagetitle='temporary'  \"$1\" -o \"$1\" && clean_image_paths \"$1\" | tr -d '\n\r'"
+# }
+
+# function convert_all_html {
+#   echo $(tput setaf 3)Starting conversion of html files to html...$(tput sgr0)
+#   i=0
+#   batch_size=20
+#   for fhtml in *.html; do
+#     cmd=$(get_convert_html_cmd "$fhtml")
+#     echo $(tput setaf 4)Running command $cmd$(tput sgr0)
+#     eval $cmd &
+#     ((i=i+1))
+#     if [ $(expr $i % $batch_size) = "0" ]; then
+#       echo $(tput setaf 5)Waiting for batch of $batch_size to complete...$(tput sgr0)
+#       wait
+#     fi
+#   done
+#   wait
+# }
+
+$@
