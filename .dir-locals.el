@@ -1,0 +1,5 @@
+((nil . ((mode . auto-fill)))
+ (web-mode . ((web-mode-code-indent-offset . 2)))
+ (sh-mode . ((sh-basic-offset . 2)
+             ))
+ )
