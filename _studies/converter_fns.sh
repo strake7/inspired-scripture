@@ -43,16 +43,8 @@ function convert_single_docx {
   eval $cmd
 }
 
-function remove_chapter_from_name {
-  for f in *-chapter-*.html; do
-    echo $(tput setaf 4)Cleaning '-chapter-' from $f$(tput sgr0)
-    mv "$f" "${f/-chapter-/-}"
-  done
-  echo "Done"
-}
-
 function remove_chapter_from_docx {
-  for f in *-chapter-*.html; do
+  for f in *\ Chapter\ *.docx; do
     echo $(tput setaf 4)Cleaning 'Chapter ' from $f$(tput sgr0)
     mv "$f" "${f/Chapter\ /}"
   done
@@ -80,3 +72,12 @@ function clean_image_paths {
 }
 
 $@
+
+
+# function remove_chapter_from_name {
+#   for f in *-chapter-*.html; do
+#     echo $(tput setaf 4)Cleaning '-chapter-' from $f$(tput sgr0)
+#     mv "$f" "${f/-chapter-/-}"
+#   done
+#   echo "Done"
+# }
