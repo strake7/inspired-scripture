@@ -51,6 +51,14 @@ function remove_chapter_from_name {
   echo "Done"
 }
 
+function remove_chapter_from_docx {
+  for f in *-chapter-*.html; do
+    echo $(tput setaf 4)Cleaning 'Chapter ' from $f$(tput sgr0)
+    mv "$f" "${f/Chapter\ /}"
+  done
+  echo "Done"
+}
+
 function optimize_images {
   # Convert any png to jpg for the study name and resize to 1024x using imagemagick.
   # Using a lower quality and compressing helps paint time signficantly.
