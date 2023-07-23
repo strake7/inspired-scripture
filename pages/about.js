@@ -20,7 +20,7 @@ export default function About(props) {
         <li>Establish the right relationships and church structure to ensure growth and accountability</li>
         </ol>
         <p>Most chapters are separately organized into at least seven lessons. Based upon Paul's teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24). These studies also quote from the New American Standard Bible. </p>
-        <p>Find us on here:</p>
+        <p>Find us here:</p>
         <ul>
           <li><a href="https://www.facebook.com/inspiredscripture" target="_blank" rel="noreferrer">Facebook Page</a></li>
           <li><a href="https://www.facebook.com/groups/inspiredscript" target="_blank" rel="noreferrer">Facebook Group</a></li>
