@@ -18,10 +18,14 @@ h2, h3 {
     height: calc(100vh - 4rem);
   }
 }
+.gsc-control-cse{
+  padding: 0 !important;
+  padding-top: 0.25em !important;
+}
 .study-content{
   overflow-x: auto;
 }
-.study-content th, td {
+.study-content th, .study-content td {
   border: 1px solid black;
   padding: 0 1em 0 1em
 }
