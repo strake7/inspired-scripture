@@ -1,5 +1,6 @@
-import { Container, Row, Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { Container, Form, Col, Row, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import Meta from './meta'
+import Script from 'next/script'
 import Scripts from "./scripts"
 
 export default function Layout({ children, meta = { title, description } }) {
@@ -48,8 +49,6 @@ export default function Layout({ children, meta = { title, description } }) {
     Job: 'job-1',
     Psalm: 'psalm-1',
   }
-
-
   return (
     <>
       <Meta title={meta.title} description={meta.description} />
@@ -60,6 +59,12 @@ export default function Layout({ children, meta = { title, description } }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
+              <Nav.Item>
+                 <Script src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8" async={true} />
+                 <div style={{minWidth: "325px"}}>
+                   <div className="gcse-search">Loading...</div>
+                 </div>
+              </Nav.Item>
               <Nav.Link href="/about">About</Nav.Link>
               <NavDropdown title="Bible Studies by Topic">
                 <NavDropdown.Item href="/#topics">Browse All</NavDropdown.Item>
