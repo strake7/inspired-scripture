@@ -1,15 +1,23 @@
-import { Container, Form, Col, Row, Nav, Navbar, NavDropdown } from "react-bootstrap"
+import {
+  Container,
+  Form,
+  Col,
+  Row,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from 'react-bootstrap'
 import Meta from './meta'
 import Script from 'next/script'
-import Scripts from "./scripts"
+import Scripts from './scripts'
 
 export default function Layout({ children, meta = { title, description } }) {
   /** Intentional debt: This is  duplicated from getAllTopics(); it would be
-    * nice to source this information from a single location however, at this
-    * time, nextjs layouts do not support getStaticProps. We can fix this in 
-    * future versions of nextjs
-    * https://nextjs.org/blog/layouts-rfc#layout-and-page-behavior
-  */
+   * nice to source this information from a single location however, at this
+   * time, nextjs layouts do not support getStaticProps. We can fix this in
+   * future versions of nextjs
+   * https://nextjs.org/blog/layouts-rfc#layout-and-page-behavior
+   */
   const navTopics = [
     'Faith',
     'Spiritual Renewal',
@@ -25,10 +33,9 @@ export default function Layout({ children, meta = { title, description } }) {
     'Attributes of God',
     'Apologetics',
     'End Times',
-    'Sin'
+    'Sin',
   ]
-  const navBooks =
-  {
+  const navBooks = {
     Genesis: 'genesis-1a.1-8',
     Exodus: 'exodus-1',
     Leviticus: 'leviticus-1',
@@ -53,32 +60,57 @@ export default function Layout({ children, meta = { title, description } }) {
     <>
       <Meta title={meta.title} description={meta.description} />
       <Scripts />
-      <Navbar bg="light" expand="lg" sticky="top" style={{ borderBottom: '1px solid #ddd' }}>
+      <Navbar
+        bg="light"
+        expand="lg"
+        sticky="top"
+        style={{ borderBottom: '1px solid #ddd' }}
+      >
         <Container>
-          <Navbar.Brand href="/" className="text-secondary font-weight-bold">Inspired Scripture</Navbar.Brand>
+          <Navbar.Brand href="/" className="text-secondary font-weight-bold">
+            Inspired Scripture
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-end"
+          >
             <Nav>
               <Nav.Item>
-                 <Script src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8" async={true} />
-                 <div style={{minWidth: "325px"}}>
-                   <div className="gcse-search">Loading...</div>
-                 </div>
+                <Script
+                  src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8"
+                  async={true}
+                />
+                <div style={{ minWidth: '325px' }}>
+                  <div className="gcse-search">Loading...</div>
+                </div>
               </Nav.Item>
               <Nav.Link href="/about">About</Nav.Link>
               <NavDropdown title="Bible Studies by Topic">
                 <NavDropdown.Item href="/#topics">Browse All</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {navTopics.map((topic) => (
-                  <NavDropdown.Item href={"/topics/" + topic.replaceAll(' ', '-').toLowerCase()} key={topic} >{topic}</NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={'/topics/' + topic.replaceAll(' ', '-').toLowerCase()}
+                    key={topic}
+                  >
+                    {topic}
+                  </NavDropdown.Item>
                 ))}
               </NavDropdown>
               <NavDropdown title="Bible Studies by Book">
-                <NavDropdown.Item href="/#bible-studies">Browse All</NavDropdown.Item>
+                <NavDropdown.Item href="/#bible-studies">
+                  Browse All
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 {Object.keys(navBooks).map((k) => (
-                  <NavDropdown.Item href={"/bible-studies/" + navBooks[k]} key={k} >{k}</NavDropdown.Item>)
-                )}
+                  <NavDropdown.Item
+                    href={'/bible-studies/' + navBooks[k]}
+                    key={k}
+                  >
+                    {k}
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
