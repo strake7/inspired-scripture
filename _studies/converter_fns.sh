@@ -56,12 +56,14 @@ function optimize_images {
   # Using a lower quality and compressing helps paint time signficantly.
   img_dir="../public/$1/media/"
   echo $(tput setaf 4)Converting PNG images for $img_dir$(tput sgr0)
-  for f in $img_dir/*.png; do
-    echo $(tput setaf 4)Converting $f$(tput sgr0)
-    n="${f%%.png}"
-    convert "$f" -resize 1024x -quality 50 "$n.jpg"
-    rm "$f"
-  done
+  if [ -n "$(echo $img_dir/*.png)" ]; then
+    for f in $img_dir/*.png; do
+      echo $(tput setaf 4)Converting $f$(tput sgr0)
+      n="${f%%.png}"
+      convert "$f" -resize 1024x -quality 50 "$n.jpg"
+      rm "$f"
+    done
+  fi
 }
 
 function clean_image_paths {
