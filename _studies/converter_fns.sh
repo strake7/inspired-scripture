@@ -16,7 +16,7 @@ function get_convert_cmd {
   # 3. Clean up the image paths in the html file
   echo "rm -rf ../public/${name} && pandoc --extract-media='../public/${name}' --metadata
   pagetitle='temporary'  \"$1\" -o $tmp && pandoc $tmp -o \"$fhtml\" --wrap=none
-  && optimize_images \"$name\" && clean_image_paths \"$fhtml\" && rm $tmp" | tr -d '\n\r'
+  && optimize_images \"$name\" && touchup_html \"$fhtml\" && rm $tmp" | tr -d '\n\r'
 }
 
 function convert_all_docx {
@@ -66,11 +66,16 @@ function optimize_images {
   fi
 }
 
-function clean_image_paths {
+function touchup_html {
   # remove "../public/" and replace ".png" with ".jpg" for the study's image paths
   echo $(tput setaf 4)Cleaning image paths in $1$(tput sgr0)
   sed -i '' 's/\.\.\/public//g' "$1"
   sed -i '' 's/\.png/\.jpg/g' "$1"
+
+  # remove the <mark> tags from the html; they are typically unexpected from the
+  # docx conversion in gdocs
+  echo $(tput setaf 4)Removing mark tags in $1$(tput sgr0)
+  sed -i '' 's/<mark>//g; s/<\/mark>//g' "$1"
 }
 
 $@
