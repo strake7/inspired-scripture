@@ -4,7 +4,8 @@ html {
 h1 {
   font-size: 1.5em;
 }
-h2, h3 {
+h2,
+h3 {
   font-size: 1.25em;
 }
 .underline {
@@ -18,22 +19,35 @@ h2, h3 {
     height: calc(100vh - 4rem);
   }
 }
-.gsc-control-cse{
+.gsc-control-cse {
   padding: 0 !important;
   padding-top: 0.25em !important;
 }
-.study-content{
+.study-content {
   overflow-x: auto;
 }
-.study-content th, .study-content td {
+.study-content th,
+.study-content td {
   border: 1px solid black;
-  padding: 0 1em 0 1em
+  padding: 0 1em 0 1em;
 }
+
 .study-content strong {
   /* The source docx files from which the study content was rendered contains various text formatting issues where font weight is interpreted as bold. Rather than address many docx files text formatting we decided to ignore strong tags in the study content for the meantime */
   font-weight: normal;
 }
-.study-content a{
+
+.study-content h1 strong,
+.study-content h2 strong,
+.study-content h3 strong,
+.study-content h4 strong,
+.study-content h5 strong,
+.study-content h6 strong {
+  /* maintain bold styling for header tags within .study-content */
+  font-weight: bold;
+}
+
+.study-content a {
   word-wrap: break-word;
 }
 .study-content h1 {
@@ -43,7 +57,7 @@ h2, h3 {
   margin-bottom: 0.5em;
 }
 .study-content h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -56,7 +70,8 @@ h2, h3 {
   background-color: #ccc;
   position: relative;
   margin-bottom: 20px;
-}.video iframe {
+}
+.video iframe {
   width: 100%;
   height: 100%;
   position: absolute;
