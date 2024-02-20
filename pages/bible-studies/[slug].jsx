@@ -44,8 +44,8 @@ export default function Study({ study, studiesForBook }) {
               className="mr-1"
             >
               <div style={{ whiteSpace: 'nowrap' }}>
-                {partitionArray(studiesForBook, 10).map((p) => (
-                  <div style={{ display: 'inline-block' }}>
+                {partitionArray(studiesForBook, 10).map((p, i) => (
+                  <div style={{ display: 'inline-block' }} key={i}>
                     {p.map((s) => (
                       <Dropdown.Item
                         key={s.slug}
