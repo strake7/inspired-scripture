@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import { getStudyBySlug, getAllStudies } from '../../lib/studies'
+import { partitionArray } from '../../lib/utils'
 import {
   Button,
   ButtonGroup,
@@ -42,16 +43,22 @@ export default function Study({ study, studiesForBook }) {
               title={study.book + ' Chapter ' + study.chapterLabel}
               className="mr-1"
             >
-              {studiesForBook.map((s) => (
-                <Dropdown.Item
-                  key={s.slug}
-                  eventKey={s.slug}
-                  active={s.slug === study.slug}
-                  href={`/bible-studies/${s.slug}`}
-                >
-                  {s.chapterLabel}
-                </Dropdown.Item>
-              ))}
+              <div style={{ whiteSpace: 'nowrap' }}>
+                {partitionArray(studiesForBook, 10).map((p, i) => (
+                  <div style={{ display: 'inline-block' }} key={i}>
+                    {p.map((s) => (
+                      <Dropdown.Item
+                        key={s.slug}
+                        eventKey={s.slug}
+                        active={s.slug === study.slug}
+                        href={`/bible-studies/${s.slug}`}
+                      >
+                        {s.chapterLabel}
+                      </Dropdown.Item>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </DropdownButton>
             <Button variant="secondary" onClick={() => window.print()}>
               <svg
