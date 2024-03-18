@@ -7,4 +7,6 @@
               ))
  (sh-mode . ((sh-basic-offset . 2)
              ))
- )
+ (yaml-mode .
+  (yaml-indent-offset . 2)))
+)
