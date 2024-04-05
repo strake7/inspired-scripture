@@ -55,13 +55,27 @@ function optimize_images {
   # Convert any png to jpg for the study name and resize to 1024x using imagemagick.
   # Using a lower quality and compressing helps paint time signficantly.
   img_dir="../public/$1/media/"
-  echo $(tput setaf 4)Converting PNG images for $img_dir$(tput sgr0)
-  if [ -n "$(echo $img_dir/*.png)" ]; then
-    for f in $img_dir/*.png; do
-      echo $(tput setaf 4)Converting $f$(tput sgr0)
+  count=$(ls 2>/dev/null -Ubad1 -- "$img_dir"/*.png | wc -l)
+  if [ "$count" -gt 0 ]; then
+    echo $(tput setaf 4)Converting PNG images for $img_dir$(tput sgr0)
+    for f in "$img_dir"/*.png; do
+      echo $(tput setaf 4)Converting $f$(tput sgr0) to jpg
       n="${f%%.png}"
-      convert "$f" -resize 1024x -quality 50 "$n.jpg"
+      convert "$f" "$n.jpg"
       rm "$f"
+    done
+  fi
+  # Optimize any jpg images to < 100k
+  count=$(ls 2>/dev/null -Ubad1 -- "$img_dir"/*.jpg | wc -l)
+  if [ "$count" -gt 0 ]; then
+    for f in "$img_dir"/*.jpg; do
+      initial_size=$(get_filesize_bytes $f)
+      if [ $initial_size -gt 102400 ]; then
+        echo $(tput setaf 4)Optimizing $f$(tput sgr0)
+        convert "$f" -define jpeg:extent=100kb "$f"
+        result_size=$(get_filesize_bytes $f)
+        echo $(tput setaf 5)Reduced $f from $initial_size to $result_size bytes$(tput sgr0)
+      fi
     done
   fi
 }
@@ -76,6 +90,10 @@ function touchup_html {
   # docx conversion in gdocs
   echo $(tput setaf 4)Removing mark tags in $1$(tput sgr0)
   sed -i '' 's/<mark>//g; s/<\/mark>//g' "$1"
+}
+
+function get_filesize_bytes {
+  stat -f%z $1
 }
 
 $@
