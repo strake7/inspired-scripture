@@ -1,12 +1,4 @@
-import {
-  Container,
-  Form,
-  Col,
-  Row,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Meta from './meta'
 import Script from 'next/script'
 import Scripts from './scripts'
