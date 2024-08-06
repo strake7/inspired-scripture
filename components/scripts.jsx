@@ -18,6 +18,11 @@ export default function Scripts() {
           __html: script,
         }}
       />
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795179986208929"
+        async={true}
+        crossOrigin="anonymous"
+      />
     </>
   )
 }

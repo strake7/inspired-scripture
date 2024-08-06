@@ -1,3 +1,4 @@
+import Ad from '../components/ad'
 import React from 'react'
 import Layout from '../components/layout'
 import {
@@ -113,6 +114,14 @@ const Home = ({ allTopics, studiesByBook }) => (
             </a>
           </Link>
         </Col>
+      </Row>
+      <Row>
+        <Ad
+          style={{ display: 'block', width: '300px', height: '250px' }}
+          data-ad-slot="2205708236"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
       </Row>
       <hr className="mt-sm-5 mb-sm-5" />
       <h2 id="topics">Bible Studies by Topic</h2>
