@@ -142,14 +142,6 @@ const Home = ({ allTopics, studiesByBook }) => (
           </Col>
         ))}
       </Row>
-      <Row>
-        <Ad
-          style={{ display: 'block', width: '100%' }}
-          data-ad-slot="2205708236"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      </Row>
       <hr className="mt-sm-5 mb-sm-5" />
       <h2 id="bible-studies">Bible Studies by Book</h2>
       <Row>
