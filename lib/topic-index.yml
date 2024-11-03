@@ -17,6 +17,8 @@ Faith:
     - Job's enduring faith, despite losing everything - Job 1: job-1
     - Signs of a person of faith - Psalm 27: psalm-27
     - Transforming doubt into faith - Psalm 73: psalm-73
+    - Trusting God’s Holy Scripture - Psalm 119: psalm-119
+    - Trusting God during government oppression - Psalm 125: psalm-125
   Patience:
     - Abraham's 100-year wait for God's promised son - Genesis 21: genesis-21
     - Isaac's 20-year wait for his promised son - Genesis 25: genesis-25
@@ -58,6 +60,7 @@ Faith:
     - Turning to Jesus during a trial - Psalm 70: psalm-70
     - Turning to God to overcome a trial - Psalm 74: psalm-74
     - What God offers during a trial - Psalm 86: psalm-86
+    - Lessons from David for surviving your trials - Psalm 108: psalm-108
   Hope and Comfort During Death, Suffering or Tragedy:
     - Eternal hope following Sara's death - Genesis 23: genesis-23
     - Jacob's request to be buried in the Promised Land - Genesis 47: genesis-47
@@ -81,6 +84,9 @@ Faith:
     - What God offers when you are trapped in darkness - Psalm 56: psalm-56
     - Praising Jesus when you feel overwhelmed - Psalm 61: psalm-61
     - Turning to God when you feel depressed - Psalm 88: psalm-88
+    - What Jesus offers during a crisis - Psalm 102: psalm-102
+    - Finding hope in Jesus after you sin - Psalm 106: psalm-106
+    - Turning to God when you are afflicted - Psalm 123: psalm-123
 Spiritual Renewal:
   Spiritual Renewal / Transformation:
     - God transforms Abraham and Sara - Genesis 17: genesis-17
@@ -157,6 +163,7 @@ Spiritual Renewal:
     - Signs of a person walking in faithful fellowship with God -1 Chronicles 28: 1-chronicles-28
     - Lessons from the Temple on maintaining God's fellowship - 2 Chronicles 5: 2-chronicles-5
     - Lessons from Nehemiah on maintaining God's fellowship - Nehemiah 10: nehemiah-10
+    - Being a living sacrifice for Jesus - Psalm 116: psalm-116
 Discipleship:
   Following Jesus' Ten Commandments:
     - Prelude to Jesus' Ten Commandments - Exodus 19: exodus-19
@@ -209,6 +216,7 @@ Discipleship:
     - Naaman's faith-led obedience leads to healing - 2 Kings 5: 2-kings-5
     - Lessons from Hezekiah on maintaining obedience - 2 Kings 18: 2-kings-18
     - Josiah ruled as Judah's most obedient king - 2 Kings 23: 2-kings-23
+    - God’s blessings when you are obedient - Psalm 112: psalm-112
   Keeping Vows:
     - God's laws regarding vows  - Leviticus 27: leviticus-27
     - God's laws regarding vows  - Numbers 30: numbers-30
@@ -239,6 +247,7 @@ Discipleship:
     - Maintaining your walk with Jesus (Part I) - Psalm 71: psalm-71
     - Maintaining your walk with Jesus (Part II) - Psalm 81: psalm-81
     - What Jesus desires from you - Psalm 96: psalm-96
+    - Living a righteous life for God - Psalm 101: psalm-101
 Relationships:
   Dating:
     - The search for Isaac's godly spouse - Genesis 24: genesis-24
@@ -247,7 +256,6 @@ Relationships:
     - Joseph flees temptation - Genesis 39: genesis-39
     - God's laws regarding sexual purity - Leviticus 18: leviticus-18
     - Phinehas' zeal in removing sexual impurity - Numbers 25: numbers-25
-    # - God's law against being unequally yoked - Deuteronomy 7: deuteronomy-7
     - Joshua's warning against marrying nonbelievers - Joshua 23: joshua-23
     - Samson's lust for a pagan woman - Judges 14: joshua-14
     - Samson sleeps with a Philistine prostitute - Judges 16: joshua-16
@@ -450,6 +458,9 @@ Worship:
     - Reason to worship God corporately (Part II) - Psalm 93: psalm-93
     - Lessons for properly worshiping God (Part I) - Psalm 95: psalm-95
     - Lessons for properly worshiping God (Part II) - Psalm 100: psalm-100
+    - Developing a heart for worship - Psalm 111: psalm-111
+    - Praising Jesus for His deliverance - Psalm 113: psalm-113
+    - Praising God when you are attacked - Psalm 124: psalm-124
 Spiritual Warfare:
   Lessons on Spiritual Warfare:
     - Spiritual warfare lessons from the wilderness - Numbers 1:5-16: numbers-1.5-16
@@ -495,19 +506,23 @@ Jesus in the Old Testament:
     - Jesus in Tent of Meeting  / Sanctification - Exodus 26: exodus-26
     - Jesus in the Holy of Holies / Worship - Exodus 25: exodus-25
   "Jesus' Pre-Incarnate Appearances":
-    - Jesus appears to Hagar 	- Genesis 16: genesis-16
-    - Jesus appears to Abraham 	- Genesis 18: genesis-18
+    - Jesus appears to Hagar - Genesis 16: genesis-16
+    - Jesus appears to Abraham - Genesis 18: genesis-18
     - Jesus appears to Isaac - Genesis 22: genesis-22
     - Jesus appears to Jacob - Genesis 32: genesis-32
     - Jesus appears to Moses - Exodus 3: exodus-3
-    - Jesus appears to Joshua	- Joshua 5: joshua-5
-    - Jesus appears to Gideon	- Judges 6: judges-6
+    - Jesus appears to Joshua - Joshua 5: joshua-5
+    - Jesus appears to Gideon - Judges 6: judges-6
     - Jesus appears to Samson's parents - Judges 13: judges-13
     - The foreshadow of Jesus in the gates of Jerusalem - Nehemiah 3: nehemiah-3
     - The foreshadow of Jesus as the Suffering Servant - Psalm 22: psalm-22
     - The foreshadow of Jesus as the Good Shepherd - Psalm 23: psalm-23
     - The foreshadow of Jesus as the King of Glory - Psalm 24: psalm-24
     - The foreshadow of Jesus as the King of Kings - Psalm 72: psalm-72
+    - The foreshadow of Jesus as the promised Messiah - Psalm 110: psalm-110
+    - The foreshadow of Jesus’ universal offer of salvation - Psalm 117: psalm-117
+    - The foreshadow of Jesus as the Chief Cornerstone - Psalm 118: psalm-118
+    - The foreshadow of Jesus as the Prince of Peace - Psalm 122: psalm-122
 Attributes of God:
   God's Old Testament Covenants:
     - The Noah Covenant - Genesis 9: genesis-9
@@ -532,6 +547,7 @@ Attributes of God:
     - God's faithfulness in restoring the Jews to Israel - 2 Chronicles 36: 2-chronicles-36
     - God's faithfulness in freeing the Jews from captivity - Ezra 1: ezra-1
     - Lessons about God from the Davidic Covenant - Psalm 89: psalm-89
+    - God’s faithfulness to Israel - Psalm 105: psalm-105
   God's Mercy and Grace:
     - God's mercy and grace on Jacob's family - Genesis 49: genesis-49
     - God's mercy and grace after the Jews six rebellions - Exodus 17: exodus-17
@@ -553,6 +569,7 @@ Attributes of God:
     - David's example, the mercy and grace that God offers - Psalm 6: psalm-6
     - How to respond to God’s mercy - Psalm 31: psalm-31
     - God’s mercy and grace in response to our sins - Psalm 36: psalm-36
+    - David’s praise for God’s mercy and grace - Psalm 103: psalm-103
   God's Justice:
     - Principles of divine justice (Part I) - Exodus 21: exodus-21
     - Principles of divine justice (Part I) - Exodus 22: exodus-22
@@ -597,6 +614,8 @@ Attributes of God:
     - God’s deliverance (Part IV) - Psalm 83: psalm-83
     - What Jesus offers when people attack you - Psalm 64: psalm-64
     - What God is owed because of His deliverance - Psalm 76: psalm-76
+    - Praising Jesus for His deliverance of Israel - Psalm 107: psalm-107
+    - The protections that God offers you - Psalm 121: psalm-121
   God's Holiness:
     - Honoring God's holiness with a holy life - Leviticus 19: leviticus-19
     - Keeping God's names holy - Deuteronomy 5:11: deuteronomy-5.11
@@ -672,6 +691,8 @@ Attributes of God:
     - God judges Judah with invasion - 2 Kings 24: 2-kings-24
     - God judges Judah with exile - 2 Kings 25: 2-kings-25
     - How to respond to God’s discipline - Psalm 39: psalm-39
+    - Finding hope in God after you sin - Psalm 106: psalm-106
+    - Seeking God’s deliverance when He disciplines you - Psalm 109: psalm-109
 Apologetics:
   Apologetics Regarding Creation:
     - The days of Genesis explained - Genesis 1(a)(1): genesis-1a.1
@@ -687,10 +708,12 @@ Apologetics:
     - Job reveals gravity and God's expansion of the universe - Job 26: job-26
     - God's love for humanity in His creation - Job 38: job-38
     - Praising God for His creation - Psalm 8: psalm-8
+    - Praising Jesus as the Creator - Psalm 104: psalm-104
   Apologetics Regarding the Bible:
     - Proof of the Trinity - Genesis 5: genesis-5
     - Proof of Jesus in the ordering of the 12 tribes in the wilderness - Numbers 2: numbers-2
     - Response to the Documentary Hypothesis - Deuteronomy 1: deuteronomy-1
+    - Proof of the Triune God - Psalm 110: psalm-110
   Apologetics Regarding Other Religions / Cults:
     - Christian Response to a Jehovah Witness regarding the Trinity - letter: trinity
     - Christian Response to Paramahansa Yogananda, the Self-Realization Fellowship and Reincarnation - essay: response-to-paramahansa-yogananda
@@ -821,6 +844,7 @@ Sin:
     - Baasha's war with Judah - 1 Kings 15: 1-kings-15
     - The cruelty in Northern Israel without God - 1 Kings 16: 1-kings-16
     - Jehu's cruelty to Ahab's sons and advisors - 2 Kings 10: 2-kings-10
+    - Trusting God during government oppression - Psalm 125: psalm-125
   Lies / Deceit / Blame:
     - Satan deceives Adam and Eve- Genesis 3: genesis-3
     - Abraham lies about his wife - Genesis 20: genesis-20
@@ -902,6 +926,7 @@ Sin:
     - Jezebel slanders Naboth to kill him - 1 Kings 21: 1-kings-21
     - David's lessons on responding to slander - Psalm 7: psalm-7
     - David's lessons on responding to gossip - Psalm 12: psalm-12
+    - Turning to God when you are slandered - Psalm 120: psalm-120
   Spiritual Blindness:
     - Spiritual blindness in Sodom and Gomorrah - Genesis 19: genesis-19
     - Isaac's spiritual blindness - Genesis 27: genesis-27
