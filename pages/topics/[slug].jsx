@@ -57,6 +57,6 @@ export function getStaticPaths() {
         },
       }
     }),
-    fallback: false, //TODO: set to true when ready
+    fallback: false,
   }
 }
