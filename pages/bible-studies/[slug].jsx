@@ -11,6 +11,8 @@ import {
 } from 'react-bootstrap'
 import Heading from '../../components/heading'
 import ErrorPage from 'next/error'
+import ReactDOMServer from 'react-dom/server'
+import Ad from '../../components/ad'
 
 export default function Study({ study, studiesForBook }) {
   const router = useRouter()
@@ -31,6 +33,8 @@ export default function Study({ study, studiesForBook }) {
         ></iframe>
       </div>
     ) : null
+  const adHtml = ReactDOMServer.renderToString(<Ad style={{ height: '250px' }} />)
+  const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
 
   return (
     <Layout meta={{ title: study.title, description: study.description }}>
@@ -73,24 +77,11 @@ export default function Study({ study, studiesForBook }) {
                 <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
               </svg>
             </Button>
-            {/* <ul style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  listStyleType: 'none',
-                }}>
-                  {studiesForBook.map((s) => (
-                    <li key={s.slug}>
-                      <a key={s.slug}
-                        className={"p-2 " + (s.slug == study.slug ? ' text-muted font-weight-bolder' : '')}
-                        href={`/bible-studies/${s.slug}`}>{s.chapterLabel}</a>
-                    </li>
-                  ))}
-                </ul> */}
           </div>
           <Heading>{study.title}</Heading>
           {renderStudyVideo()}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
+        <div dangerouslySetInnerHTML={{ __html: studyContentWithAd }}></div>
       </Container>
     </Layout>
   )
