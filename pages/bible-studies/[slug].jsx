@@ -23,9 +23,8 @@ export default function Study({ study, studiesForBook }) {
     study.videoSrc ? (
       <div className="video">
         <iframe
-          width="560"
-          height="315"
           src={study.videoSrc}
+          aria-label={`Bible study video for ${study.slug}.`}
           title={study.slug + ' Study Video'}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -34,7 +33,12 @@ export default function Study({ study, studiesForBook }) {
       </div>
     ) : null
   const adHtml = ReactDOMServer.renderToString(
-    <Ad style={{ height: '250px' }} />,
+    <Ad
+      style={{ height: '250px' }}
+      data-ad-slot="2205708236"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />,
   )
   const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
 
@@ -48,6 +52,7 @@ export default function Study({ study, studiesForBook }) {
               variant="info"
               title={study.book + ' Chapter ' + study.chapterLabel}
               className="mr-1"
+              aria-label="Select a bible study book & chapter"
             >
               <div style={{ whiteSpace: 'nowrap' }}>
                 {partitionArray(studiesForBook, 10).map((p, i) => (
@@ -66,7 +71,11 @@ export default function Study({ study, studiesForBook }) {
                 ))}
               </div>
             </DropdownButton>
-            <Button variant="secondary" onClick={() => window.print()}>
+            <Button
+              variant="secondary"
+              onClick={() => window.print()}
+              aria-label="Print this Bible study"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
