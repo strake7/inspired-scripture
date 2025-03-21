@@ -33,7 +33,9 @@ export default function Study({ study, studiesForBook }) {
         ></iframe>
       </div>
     ) : null
-  const adHtml = ReactDOMServer.renderToString(<Ad style={{ height: '250px' }} />)
+  const adHtml = ReactDOMServer.renderToString(
+    <Ad style={{ height: '250px' }} />,
+  )
   const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
 
   return (
