@@ -46,14 +46,14 @@ export default function About() {
                   every single book of the Old Testament is both "inspired" and
                   also "profitable for teaching, for reproof, for correction,
                   for training in righteousness;" (2 Tim. 3:16). Most believers
-                  would profess that the Old Testament is "inspired." Yet, few
+                  would profess that the Old Testament is "inspired." But few
                   would use a book like Leviticus, Numbers or Deuteronomy for
                   "for teaching, for reproof, for correction, for training in
                   righteousness."
                 </p>
                 <p>
                   Believers in Christ are correctly taught that He fulfilled all
-                  of the tests for salvation. Yet, believers are rarely taught
+                  of the tests for salvation. But believers are rarely taught
                   how the Old Testament can still be relevant to their walk for
                   reasons unrelated to salvation.
                 </p>
