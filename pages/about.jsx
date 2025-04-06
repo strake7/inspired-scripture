@@ -31,7 +31,6 @@ export default function About() {
                 richness of the Old Testament for modern Christian life.
               </p>
             </Col>
-            {/* <Col md={4} className="text-center"></Col> */}
           </Row>
         </Container>
       </div>

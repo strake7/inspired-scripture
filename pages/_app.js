@@ -9,4 +9,3 @@ config.autoAddCss = false
 export default function InspiredScriptureApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
-
