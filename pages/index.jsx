@@ -16,47 +16,30 @@ const Home = ({ allTopics, studiesByBook }) => (
     }}
   >
     <div
-      className="bg-primary py-5 mb-4 text-white"
+      className="hero-section d-flex align-items-center justify-content-center text-white"
       style={{
+        minHeight: '60vh',
+        background: 'linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(/welcome-span.jpg) center/cover no-repeat',
         position: 'relative',
-        backgroundSize: 'cover',
-        backgroundImage: 'url(/welcome-span.jpg)',
-        backgroundPosition: 'center',
       }}
     >
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          background: '#000',
-          opacity: 0.5,
-        }}
-      ></div>
-      <Container
-        className="text-center text-light"
-        style={{ position: 'relative' }}
-      >
+      <Container className="text-center" style={{ zIndex: 2 }}>
+        <h1 className="display-4 fw-bold mb-3">Inspired Scripture</h1>
         <h2 className="pb-4">Biblical studies for the logical mind</h2>
-        <i>
-          “All Scripture is inspired by God and profitable for teaching, for
-          reproof, for correction, for training in righteousness;” (2 Tim.
-          3:16.)
-        </i>
+        <blockquote className="blockquote">
+          <p>
+            “All Scripture is inspired by God and profitable for teaching, for reproof, for correction, for training in righteousness;”
+          </p>
+          <footer className="blockquote-footer text-white-50">2 Tim. 3:16</footer>
+        </blockquote>
       </Container>
     </div>
-    <Container id="content">
+    <Container id="content" className="py-5">
       <Heading>Welcome to Inspired Scripture</Heading>
-      <p className="mb-5">
-        This is a place of study with content intended to equip and encourage
-        you as a believer in Christ to see the relevance of the Old Testament in
-        modern life. Studies are organized into at least seven lessons. Based
-        upon Paul’s teachings, these studies adopt both a historical and
-        simultaneous allegorical approach to the Old Testament wherever possible
-        (Gal. 4:24). These studies also quote from the New American Standard
-        Bible.
+      <p className="lead mb-5">
+        This is a place of study with content intended to equip and encourage you as a believer in Christ to see the relevance of the Old Testament in modern life.
+        Studies are organized into at least seven lessons. Based upon Paul’s teachings, these studies adopt both a historical and simultaneous allegorical approach to the Old Testament wherever possible (Gal. 4:24).
+        These studies also quote from the New American Standard Bible.
       </p>
       <Row>
         <Col xs={6} className="text-center">
