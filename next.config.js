@@ -1,4 +1,5 @@
 module.exports = {
+  output: 'export',
   async redirects() {
     return [
       {
@@ -16,7 +17,7 @@ module.exports = {
         destination: '/#topics',
         permanent: true,
       },
-    {
+      {
         source: '/studies/:slug*',
         destination: '/bible-studies/:slug*',
         permanent: true,

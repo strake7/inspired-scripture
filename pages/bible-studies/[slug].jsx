@@ -51,7 +51,7 @@ export default function Study({ study, studiesForBook }) {
               as={ButtonGroup}
               variant="info"
               title={study.book + ' Chapter ' + study.chapterLabel}
-              className="mr-1"
+              className="me-1"
               aria-label="Select a bible study book & chapter"
             >
               <div style={{ whiteSpace: 'nowrap' }}>

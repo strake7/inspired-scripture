@@ -1,14 +1,6 @@
 import Ad from '../components/ad'
-import React from 'react'
 import Layout from '../components/layout'
-import {
-  Card,
-  ListGroup,
-  Row,
-  Jumbotron,
-  Container,
-  Col,
-} from 'react-bootstrap'
+import { Card, ListGroup, Row, Container, Col } from 'react-bootstrap'
 import Heading from '../components/heading'
 import Link from 'next/link'
 import { getAllTopics } from '../lib/topics'
@@ -23,8 +15,8 @@ const Home = ({ allTopics, studiesByBook }) => (
         'Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ.',
     }}
   >
-    <Jumbotron
-      className="text-white"
+    <div
+      className="bg-primary py-5 mb-4 text-white"
       style={{
         position: 'relative',
         backgroundSize: 'cover',
@@ -54,7 +46,7 @@ const Home = ({ allTopics, studiesByBook }) => (
           3:16.)
         </i>
       </Container>
-    </Jumbotron>
+    </div>
     <Container id="content">
       <Heading>Welcome to Inspired Scripture</Heading>
       <p className="mb-5">
@@ -69,7 +61,7 @@ const Home = ({ allTopics, studiesByBook }) => (
       <Row>
         <Col xs={6} className="text-center">
           <Link href="#topics">
-            <a className="text-secondary">
+            <span className="text-secondary">
               <svg
                 width="2rem"
                 viewBox="0 0 16 16"
@@ -91,12 +83,12 @@ const Home = ({ allTopics, studiesByBook }) => (
               </svg>
               <h5>Bible Studies by Topic</h5>
               <p>Explore studies for unique subjects of worship.</p>
-            </a>
+            </span>
           </Link>
         </Col>
         <Col xs={6} className="text-center">
           <Link href="#bible-studies">
-            <a className="text-secondary">
+            <span className="text-secondary">
               <svg
                 width="2rem"
                 viewBox="0 0 16 16"
@@ -111,7 +103,7 @@ const Home = ({ allTopics, studiesByBook }) => (
               </svg>
               <h5>Bible Studies by Book</h5>
               <p>Explore studies for each book of the Bible.</p>
-            </a>
+            </span>
           </Link>
         </Col>
       </Row>

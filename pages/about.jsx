@@ -140,7 +140,7 @@ export default function About() {
                 </p>
                 <p className="mb-0">
                   <Link href="/#bible-studies">
-                    <a className="btn btn-primary">Explore Bible Studies</a>
+                    <span className="btn btn-primary">Explore Bible Studies</span>
                   </Link>
                 </p>
               </Card.Body>
