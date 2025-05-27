@@ -26,7 +26,6 @@ export default function Study({ study, studiesForBook }) {
           src={study.videoSrc}
           aria-label={`Bible study video for ${study.slug}.`}
           title={study.slug + ' Study Video'}
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
@@ -51,7 +50,7 @@ export default function Study({ study, studiesForBook }) {
               as={ButtonGroup}
               variant="info"
               title={study.book + ' Chapter ' + study.chapterLabel}
-              className="mr-1"
+              className="me-1"
               aria-label="Select a bible study book & chapter"
             >
               <div style={{ whiteSpace: 'nowrap' }}>
@@ -110,14 +109,9 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const studies = getAllStudies(['slug'])
-  return {
-    paths: studies.map((s) => {
-      return {
-        params: {
-          slug: s.slug,
-        },
-      }
-    }),
-    fallback: false,
-  }
+  const paths = studies.map(({ slug }) => ({
+    params: { slug },
+  }))
+
+  return { paths, fallback: false }
 }

@@ -1,11 +1,9 @@
 import { NextResponse } from 'next/server';
 
-const Middleware = (req) => {
+export function middleware(req) {
   // force lower-case match and try redirect if needed
   if (req.nextUrl.pathname === req.nextUrl.pathname.toLowerCase())
     return NextResponse.next();
 
-  return NextResponse.redirect(new URL(req.nextUrl.origin + req.nextUrl.pathname.toLowerCase()));
-};
-
-export default Middleware;
+  return NextResponse.redirect(new URL(req.nextUrl.pathname.toLowerCase(), req.nextUrl.origin));
+}

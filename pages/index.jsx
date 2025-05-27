@@ -1,14 +1,6 @@
 import Ad from '../components/ad'
-import React from 'react'
 import Layout from '../components/layout'
-import {
-  Card,
-  ListGroup,
-  Row,
-  Jumbotron,
-  Container,
-  Col,
-} from 'react-bootstrap'
+import { Card, ListGroup, Row, Container, Col } from 'react-bootstrap'
 import Heading from '../components/heading'
 import Link from 'next/link'
 import { getAllTopics } from '../lib/topics'
@@ -23,41 +15,32 @@ const Home = ({ allTopics, studiesByBook }) => (
         'Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ.',
     }}
   >
-    <Jumbotron
-      className="text-white"
+    <div
+      className="hero-section d-flex align-items-center justify-content-center text-white"
       style={{
+        minHeight: '60vh',
+        background:
+          'linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(/welcome-span.jpg) center/cover no-repeat',
         position: 'relative',
-        backgroundSize: 'cover',
-        backgroundImage: 'url(/welcome-span.jpg)',
-        backgroundPosition: 'center',
       }}
     >
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          background: '#000',
-          opacity: 0.5,
-        }}
-      ></div>
-      <Container
-        className="text-center text-light"
-        style={{ position: 'relative' }}
-      >
+      <Container className="text-center" style={{ zIndex: 2 }}>
+        <h1 className="display-4 fw-bold mb-3">Inspired Scripture</h1>
         <h2 className="pb-4">Biblical studies for the logical mind</h2>
-        <i>
-          “All Scripture is inspired by God and profitable for teaching, for
-          reproof, for correction, for training in righteousness;” (2 Tim.
-          3:16.)
-        </i>
+        <blockquote className="blockquote">
+          <p>
+            “All Scripture is inspired by God and profitable for teaching, for
+            reproof, for correction, for training in righteousness;”
+          </p>
+          <footer className="blockquote-footer text-white-50">
+            2 Tim. 3:16
+          </footer>
+        </blockquote>
       </Container>
-    </Jumbotron>
-    <Container id="content">
+    </div>
+    <Container id="content" className="py-5">
       <Heading>Welcome to Inspired Scripture</Heading>
-      <p className="mb-5">
+      <p className="lead mb-5">
         This is a place of study with content intended to equip and encourage
         you as a believer in Christ to see the relevance of the Old Testament in
         modern life. Studies are organized into at least seven lessons. Based
@@ -69,7 +52,7 @@ const Home = ({ allTopics, studiesByBook }) => (
       <Row>
         <Col xs={6} className="text-center">
           <Link href="#topics">
-            <a className="text-secondary">
+            <span className="text-secondary">
               <svg
                 width="2rem"
                 viewBox="0 0 16 16"
@@ -91,12 +74,12 @@ const Home = ({ allTopics, studiesByBook }) => (
               </svg>
               <h5>Bible Studies by Topic</h5>
               <p>Explore studies for unique subjects of worship.</p>
-            </a>
+            </span>
           </Link>
         </Col>
         <Col xs={6} className="text-center">
           <Link href="#bible-studies">
-            <a className="text-secondary">
+            <span className="text-secondary">
               <svg
                 width="2rem"
                 viewBox="0 0 16 16"
@@ -111,7 +94,7 @@ const Home = ({ allTopics, studiesByBook }) => (
               </svg>
               <h5>Bible Studies by Book</h5>
               <p>Explore studies for each book of the Bible.</p>
-            </a>
+            </span>
           </Link>
         </Col>
       </Row>
