@@ -47,6 +47,7 @@ export default function Layout({ children, meta = { title, description } }) {
     Esther: 'esther-1',
     Job: 'job-1',
     Psalm: 'psalm-1',
+    Proverbs: 'proverbs-1',
   }
   return (
     <>
