@@ -183,7 +183,7 @@ function studiesList(studies) {
 
 export default Home
 
-export function getStaticProps({ params }) {
+export function getStaticProps() {
   const allTopics = getAllTopics()
   const allStudies = getAllStudies()
   //group and warn for missing
@@ -205,7 +205,6 @@ export function getStaticProps({ params }) {
   return {
     props: {
       allTopics,
-
       studiesByBook,
     },
   }
