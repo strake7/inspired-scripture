@@ -27,3 +27,4 @@ yarn-error.log*
 # study docx files should not be tracked in source control
 /_studies/**/*.docx
 /_studies/**/*.doc
+.aider*

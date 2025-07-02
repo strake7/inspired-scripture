@@ -1,13 +1,7 @@
-((nil . ((mode . auto-fill)))
- (web-mode . ((web-mode-code-indent-offset . 2)
-              (web-mode-markup-indent-offset . 2)
-              (web-mode-css-indent-offset . 2)
-              (lsp-eslint-package-manager . "yarn")
-              (lsp-eslint-auto-fix-on-save . t)
-              ))
+(
  (sh-mode . ((sh-basic-offset . 2)
              ))
  (yaml-mode .
-  ((tab-width . 2)
-  (yaml-indent-offset . 2)))
-)
+            ((tab-width . 2)
+             (yaml-indent-offset . 2)))
+ )
