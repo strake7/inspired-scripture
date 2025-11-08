@@ -19,7 +19,7 @@ async function generateSitemap() {
     const slug = file.replace('.html', '')
     return {
       url: `/bible-studies/${slug}`,
-      changefreq: 'yearly',
+      changefreq: 'monthly',
       priority: '0.8',
     }
   })
@@ -37,7 +37,7 @@ async function generateSitemap() {
 
   const staticPages = [
     { url: '', changefreq: 'monthly', priority: '1.0' },
-    { url: '/about', changefreq: 'yearly', priority: '0.5' },
+    { url: '/about', changefreq: 'monthly', priority: '0.5' },
   ]
 
   const allPages = [...staticPages, ...studyPages, ...topicPages]
