@@ -41,8 +41,84 @@ export default function Study({ study, studiesForBook }) {
   )
   const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
 
+  // Generate structured data for the study
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: study.title,
+        description: study.description,
+        author: {
+          '@type': 'Person',
+          name: 'John Edson',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Inspired Scripture',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://inspiredscripture.com/welcome-span.jpg',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://inspiredscripture.com/bible-studies/${study.slug}`,
+        },
+        image: 'https://inspiredscripture.com/welcome-span.jpg',
+        datePublished: '2020-01-01',
+        dateModified: '2024-01-01',
+      },
+      ...(study.videoSrc
+        ? [
+            {
+              '@type': 'VideoObject',
+              name: `${study.title} - Bible Study Video`,
+              description: study.description,
+              thumbnailUrl: `https://img.youtube.com/vi/${study.videoSrc.split('/embed/')[1]?.split('?')[0]}/maxresdefault.jpg`,
+              uploadDate: '2020-01-01',
+              contentUrl: study.videoSrc,
+              embedUrl: study.videoSrc,
+            },
+          ]
+        : []),
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://inspiredscripture.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Bible Studies',
+            item: 'https://inspiredscripture.com/#bible-studies',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: study.title,
+            item: `https://inspiredscripture.com/bible-studies/${study.slug}`,
+          },
+        ],
+      },
+    ],
+  }
+
   return (
-    <Layout meta={{ title: study.title, description: study.description }}>
+    <Layout
+      meta={{
+        title: study.title,
+        description: study.description,
+        canonical: `https://inspiredscripture.com/bible-studies/${study.slug}`,
+        ogType: 'article',
+        author: 'John Edson',
+        structuredData,
+      }}
+    >
       <Container className="study-content">
         <div className="d-print-none">
           <div className="mt-2 mb-2">

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "packageManager": "yarn@1.22.21",
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build",
-    "start": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 4000",
+    "build": "node scripts/generate-sitemap.mjs && next build",
+    "start": "next dev -p 4000",
     "test": "jest",
     "lint": "next lint"
   },
