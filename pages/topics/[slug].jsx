@@ -11,11 +11,54 @@ export default function Study({ topic = { slug, name, sections } }) {
     return <ErrorPage statusCode={404} />
   }
   const title = `Bible Study Topic: ${topic.name}`
+
+  // Generate structured data for the topic page
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: title,
+        description: `John Edson's bible studies and commentary concerning ${topic.name}.`,
+        url: `https://inspiredscripture.com/topics/${topic.slug}`,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Inspired Scripture',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://inspiredscripture.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Topics',
+            item: 'https://inspiredscripture.com/#topics',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: topic.name,
+            item: `https://inspiredscripture.com/topics/${topic.slug}`,
+          },
+        ],
+      },
+    ],
+  }
+
   return (
     <Layout
       meta={{
         title,
         description: `John Edson's bible studies and commentary concerning ${topic.name}.`,
+        canonical: `https://inspiredscripture.com/topics/${topic.slug}`,
+        structuredData,
       }}
     >
       <Container className="study-content pt-2">

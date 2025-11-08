@@ -19,6 +19,7 @@ export default function About() {
         title: 'About',
         description:
           'About inspiredscripture.com - Equipping believers with relevant Old Testament studies.',
+        canonical: 'https://inspiredscripture.com/about',
       }}
     >
       <div className="pt-5">

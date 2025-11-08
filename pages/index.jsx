@@ -7,14 +7,44 @@ import { getAllTopics } from '../lib/topics'
 import { getAllStudies } from '../lib/studies'
 import { ORDERED_BOOKS } from '../lib/books'
 
-const Home = ({ allTopics, studiesByBook }) => (
-  <Layout
-    meta={{
-      title: 'Inspired Scripture',
-      description:
-        'Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ.',
-    }}
-  >
+const Home = ({ allTopics, studiesByBook }) => {
+  // Generate structured data for the homepage
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Inspired Scripture',
+    url: 'https://inspiredscripture.com',
+    description:
+      'Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Inspired Scripture',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://inspiredscripture.com/welcome-span.jpg',
+      },
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate:
+          'https://inspiredscripture.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  return (
+    <Layout
+      meta={{
+        title: 'Inspired Scripture',
+        description:
+          'Learn and study about the relevance of the Old Testament to modern life as a believer in Jesus Christ.',
+        canonical: 'https://inspiredscripture.com',
+        structuredData,
+      }}
+    >
     <div
       className="hero-section d-flex align-items-center justify-content-center text-white"
       style={{
@@ -159,7 +189,8 @@ const Home = ({ allTopics, studiesByBook }) => (
       </Row>
     </Container>
   </Layout>
-)
+  )
+}
 
 function studiesList(studies) {
   if (!studies || studies.length == 0) return <p>Coming soon!</p>
