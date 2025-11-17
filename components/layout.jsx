@@ -51,7 +51,7 @@ export default function Layout({ children, meta = { title, description } }) {
   }
   return (
     <>
-      <Meta title={meta.title} description={meta.description} />
+      <Meta {...meta} />
       <Scripts />
       <Navbar
         bg="light"

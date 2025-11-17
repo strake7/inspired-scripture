@@ -1316,6 +1316,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://inspiredscripture.com/bible-studies/exodus-chapter-3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/exodus-chapter-4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://inspiredscripture.com/bible-studies/ezra-1</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2547,6 +2557,31 @@
   </url>
   <url>
     <loc>https://inspiredscripture.com/bible-studies/proverbs-20</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/proverbs-21</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/proverbs-22</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/proverbs-23</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/proverbs-24</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/proverbs-25</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
