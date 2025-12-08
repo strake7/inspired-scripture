@@ -13,7 +13,9 @@ export default function Meta({
 }) {
   const siteUrl = 'https://inspiredscripture.com'
   const defaultImage = `${siteUrl}/welcome-span.jpg`
-  const fullTitle = title ? `${title} | Inspired Scripture` : 'Inspired Scripture'
+  const fullTitle = title
+    ? `${title} | Inspired Scripture`
+    : 'Inspired Scripture'
   const canonicalUrl = canonical || siteUrl
   const imageUrl = ogImage || defaultImage
 

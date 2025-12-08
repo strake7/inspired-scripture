@@ -7,7 +7,7 @@
     "build": "node scripts/generate-sitemap.mjs && next build",
     "start": "next dev -p 4000",
     "test": "jest",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -26,7 +26,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.28.0",
     "@types/jest": "^29.5.14",
     "babel-jest": "^29.7.0",

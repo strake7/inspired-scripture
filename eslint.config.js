@@ -1,29 +1,18 @@
-const {
-    defineConfig,
-} = require("eslint/config");
+const nextConfig = require('eslint-config-next')
+const prettier = require('eslint-plugin-prettier')
+const prettierConfig = require('eslint-config-prettier')
 
-const prettier = require("eslint-plugin-prettier");
-const js = require("@eslint/js");
-
-const {
-    FlatCompat,
-} = require("@eslint/eslintrc");
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-module.exports = defineConfig([{
-    extends: compat.extends("next", "next/core-web-vitals", "prettier"),
-
+module.exports = [
+  ...nextConfig,
+  prettierConfig,
+  {
     plugins: {
-        prettier,
+      prettier,
     },
 
     rules: {
-        "prettier/prettier": "error",
-        "react/no-unescaped-entities": 0,
+      'prettier/prettier': 'error',
+      'react/no-unescaped-entities': 0,
     },
-}]);
+  },
+]
