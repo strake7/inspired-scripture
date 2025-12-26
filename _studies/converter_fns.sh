@@ -61,7 +61,7 @@ function optimize_images {
     for f in "$img_dir"/*.png; do
       echo $(tput setaf 4)Converting $f$(tput sgr0) to jpg
       n="${f%%.png}"
-      convert "$f" "$n.jpg"
+      magick "$f" "$n.jpg"
       rm "$f"
     done
   fi
@@ -72,7 +72,7 @@ function optimize_images {
       initial_size=$(get_filesize_bytes $f)
       if [ $initial_size -gt 102400 ]; then
         echo $(tput setaf 4)Optimizing $f$(tput sgr0)
-        magick convert "$f" -define jpeg:extent=100kb "$f"
+        magick "$f" -define jpeg:extent=100kb "$f"
         result_size=$(get_filesize_bytes $f)
         echo $(tput setaf 5)Reduced $f from $initial_size to $result_size bytes$(tput sgr0)
       fi
