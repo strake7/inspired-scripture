@@ -81,3 +81,11 @@ h3 {
   top: 0;
   left: 0;
 }
+
+@media print {
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .adbanner-customize {
+    display: none !important;
+  }
+}
