@@ -32,12 +32,14 @@ export default function Study({ study, studiesForBook }) {
       </div>
     ) : null
   const adHtml = ReactDOMServer.renderToString(
-    <Ad
-      style={{ height: '250px' }}
-      data-ad-slot="2205708236"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />,
+    <div className="ad-container">
+      <Ad
+        style={{ height: '250px' }}
+        data-ad-slot="2205708236"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>,
   )
   const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
 
