@@ -5,6 +5,8 @@ export default function Meta({
   description,
   canonical,
   ogImage,
+  ogImageWidth,
+  ogImageHeight,
   ogType = 'website',
   publishedTime,
   modifiedTime,
@@ -13,6 +15,8 @@ export default function Meta({
 }) {
   const siteUrl = 'https://inspiredscripture.com'
   const defaultImage = `${siteUrl}/welcome-span.jpg`
+  const defaultImageWidth = 708
+  const defaultImageHeight = 416
   const fullTitle = title
     ? `${title} | Inspired Scripture`
     : 'Inspired Scripture'
@@ -36,6 +40,14 @@ export default function Meta({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={imageUrl} />
+      <meta
+        property="og:image:width"
+        content={String(ogImageWidth || defaultImageWidth)}
+      />
+      <meta
+        property="og:image:height"
+        content={String(ogImageHeight || defaultImageHeight)}
+      />
       <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content="en_US" />
 

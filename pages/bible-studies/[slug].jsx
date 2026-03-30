@@ -46,21 +46,27 @@ export default function Study({ study, studiesForBook }) {
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'Person',
+        '@id': 'https://inspiredscripture.com/#author',
+        name: 'John Edson',
+        url: 'https://inspiredscripture.com/about',
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://inspiredscripture.com/#organization',
+        name: 'Inspired Scripture',
+        url: 'https://inspiredscripture.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://inspiredscripture.com/welcome-span.jpg',
+        },
+      },
+      {
         '@type': 'Article',
         headline: study.title,
         description: study.description,
-        author: {
-          '@type': 'Person',
-          name: 'John Edson',
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Inspired Scripture',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://inspiredscripture.com/welcome-span.jpg',
-          },
-        },
+        author: { '@id': 'https://inspiredscripture.com/#author' },
+        publisher: { '@id': 'https://inspiredscripture.com/#organization' },
         mainEntityOfPage: {
           '@type': 'WebPage',
           '@id': `https://inspiredscripture.com/bible-studies/${study.slug}`,
@@ -115,6 +121,11 @@ export default function Study({ study, studiesForBook }) {
         description: study.description,
         canonical: `https://inspiredscripture.com/bible-studies/${study.slug}`,
         ogType: 'article',
+        ogImage: study.videoSrc
+          ? `https://img.youtube.com/vi/${study.videoSrc.split('/embed/')[1]?.split('?')[0]}/maxresdefault.jpg`
+          : undefined,
+        ogImageWidth: study.videoSrc ? 1280 : undefined,
+        ogImageHeight: study.videoSrc ? 720 : undefined,
         author: 'John Edson',
         structuredData,
       }}
