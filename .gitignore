@@ -29,3 +29,4 @@ pnpm-debug.log*
 /_studies/**/*.docx
 /_studies/**/*.doc
 .aider*
+/.agent-shell/
