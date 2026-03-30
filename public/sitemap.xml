@@ -1076,6 +1076,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-10</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-11</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-12</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-2</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1087,6 +1102,31 @@
   </url>
   <url>
     <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-5</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-6</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-7</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/bible-studies/ecclesiastes-9</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
