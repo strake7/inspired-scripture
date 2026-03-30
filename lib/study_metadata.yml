@@ -1,231 +1,345 @@
 # Metadata to decorate studies. Use slug for key
 job-1:
   videoSrc: https://www.youtube.com/embed/bJ-FjaHcetk
+  videoPublishedAt: '2022-05-24'
 job-2:
   videoSrc: https://www.youtube.com/embed/HX6U30ZjE7Y
+  videoPublishedAt: '2022-05-31'
 job-3:
   videoSrc: https://www.youtube.com/embed/bUCWJAnaXqQ
+  videoPublishedAt: '2022-06-28'
 job-4:
   videoSrc: https://www.youtube.com/embed/iL7L5LViFEA
+  videoPublishedAt: '2022-06-28'
 job-5:
   videoSrc: https://www.youtube.com/embed/HaPZuVwmQFY
+  videoPublishedAt: '2022-07-15'
 job-6:
   videoSrc: https://www.youtube.com/embed/YEtbV-lyBRQ
+  videoPublishedAt: '2022-07-15'
 job-7:
   videoSrc: https://www.youtube.com/embed/0s00C7TtsUQ
+  videoPublishedAt: '2022-07-25'
 job-8:
   videoSrc: https://www.youtube.com/embed/glpj82Qo0bY
+  videoPublishedAt: '2022-07-25'
 job-9:
   videoSrc: https://www.youtube.com/embed/CX8OVGkVAeo
+  videoPublishedAt: '2022-08-09'
 job-10:
   videoSrc: https://www.youtube.com/embed/xiX0DLAXKzo
+  videoPublishedAt: '2022-08-09'
 job-11:
   videoSrc: https://www.youtube.com/embed/VqsXbLnq5fI
+  videoPublishedAt: '2022-08-09'
 job-12:
   videoSrc: https://www.youtube.com/embed/wsn-qKnmH14
+  videoPublishedAt: '2022-08-09'
 job-13:
   videoSrc: https://www.youtube.com/embed/KiQL-_2nrfg
+  videoPublishedAt: '2022-09-01'
 job-14:
   videoSrc: https://www.youtube.com/embed/XitZrVQfUuE
+  videoPublishedAt: '2022-08-31'
 job-15:
   videoSrc: https://www.youtube.com/embed/y2DB0tomTh8
+  videoPublishedAt: '2022-09-15'
 job-16:
   videoSrc: https://www.youtube.com/embed/lPrmA3480ow
+  videoPublishedAt: '2022-09-15'
 job-17:
   videoSrc: https://www.youtube.com/embed/T1V-dKHvKAw
+  videoPublishedAt: '2022-09-15'
 job-18:
   videoSrc: https://www.youtube.com/embed/giEbHIOu4So
+  videoPublishedAt: '2022-09-15'
 job-19:
   videoSrc: https://www.youtube.com/embed/LrPuMKEw5AA
+  videoPublishedAt: '2022-09-30'
 job-20:
   videoSrc: https://www.youtube.com/embed/hG8nnCxZ-1U
+  videoPublishedAt: '2022-09-30'
 job-21:
   videoSrc: https://www.youtube.com/embed/_bHuLaOZIow
+  videoPublishedAt: '2022-09-30'
 job-22:
   videoSrc: https://www.youtube.com/embed/SGWLFh7528s
+  videoPublishedAt: '2022-09-30'
 job-23:
   videoSrc: https://www.youtube.com/embed/DSexpwhIO1A
+  videoPublishedAt: '2022-10-18'
 job-24:
   videoSrc: https://www.youtube.com/embed/IAVHREWHkzE
+  videoPublishedAt: '2022-10-18'
 job-25:
   videoSrc: https://www.youtube.com/embed/NCURMGzbIvw
+  videoPublishedAt: '2022-10-18'
 job-26:
   videoSrc: https://www.youtube.com/embed/byHNk0HBURs
+  videoPublishedAt: '2022-10-18'
 job-27:
   videoSrc: https://www.youtube.com/embed/a-T_dEl4zEs
+  videoPublishedAt: '2022-10-28'
 job-28:
   videoSrc: https://www.youtube.com/embed/BrXmmYcYtpk
+  videoPublishedAt: '2022-10-28'
 job-29:
   videoSrc: https://www.youtube.com/embed/JywmeC-n1h8
+  videoPublishedAt: '2022-11-11'
 job-30:
   videoSrc: https://www.youtube.com/embed/1vXjb0rrj0M
+  videoPublishedAt: '2022-11-11'
 job-31:
   videoSrc: https://www.youtube.com/embed/QZ4MbUpqm_A
+  videoPublishedAt: '2022-11-11'
 job-32:
   videoSrc: https://www.youtube.com/embed/FnWHuMYBw-8
+  videoPublishedAt: '2022-11-11'
 job-33:
   videoSrc: https://www.youtube.com/embed/5-sejwYhiEw
+  videoPublishedAt: '2022-12-08'
 job-34:
   videoSrc: https://www.youtube.com/embed/ou9pkKSv01A
+  videoPublishedAt: '2022-12-08'
 job-35:
   videoSrc: https://www.youtube.com/embed/AcxfqGZfnUk
+  videoPublishedAt: '2023-02-03'
 job-36:
   videoSrc: https://www.youtube.com/embed/LVBrKsds9sA
+  videoPublishedAt: '2023-02-04'
 job-37:
   videoSrc: https://www.youtube.com/embed/mRtI6w_yCpo
+  videoPublishedAt: '2023-02-05'
 job-38:
   videoSrc: https://www.youtube.com/embed/Cd8d5Tas_B4
+  videoPublishedAt: '2023-02-10'
 job-39:
   videoSrc: https://www.youtube.com/embed/xiKwbUt8GeE
+  videoPublishedAt: '2023-02-11'
 job-40:
   videoSrc: https://www.youtube.com/embed/0ZAcnirg2qE
+  videoPublishedAt: '2023-02-12'
 job-41:
   videoSrc: https://www.youtube.com/embed/AG8LDFH2yc4
+  videoPublishedAt: '2023-02-13'
 job-42:
   videoSrc: https://www.youtube.com/embed/bAFKcqllMSY
+  videoPublishedAt: '2023-02-14'
 psalm-1:
   videoSrc: https://www.youtube.com/embed/Ip3c7tjJl38
+  videoPublishedAt: '2024-01-14'
 psalm-2:
   videoSrc: https://www.youtube.com/embed/IwIhe8AF8LU
+  videoPublishedAt: '2024-01-15'
 psalm-3:
   videoSrc: https://www.youtube.com/embed/rUKrPSLnKuo
+  videoPublishedAt: '2024-01-17'
 psalm-4:
   videoSrc: https://www.youtube.com/embed/9aGb1TeB7M0
+  videoPublishedAt: '2024-02-05'
 psalm-5:
   videoSrc: https://www.youtube.com/embed/fpstadXT8rE
+  videoPublishedAt: '2024-08-11'
 psalm-6:
   videoSrc: https://www.youtube.com/embed/wXqCyTZe0RQ
+  videoPublishedAt: '2024-08-18'
 psalm-7:
   videoSrc: https://www.youtube.com/embed/e9GGvYbmKsU
+  videoPublishedAt: '2024-08-25'
 psalm-8:
   videoSrc: https://www.youtube.com/embed/VRs9oWTh32o
+  videoPublishedAt: '2024-09-01'
 psalm-9:
   videoSrc: https://www.youtube.com/embed/w6Ohwvdxrh8
 psalm-10:
   videoSrc: https://www.youtube.com/embed/lQEoTcOt_TQ
+  videoPublishedAt: '2024-09-15'
 psalm-11:
   videoSrc: https://www.youtube.com/embed/TaGqWtS42l4
+  videoPublishedAt: '2024-09-29'
 psalm-12:
   videoSrc: https://www.youtube.com/embed/KW-jiTzVAvY
+  videoPublishedAt: '2024-10-06'
 psalm-13:
   videoSrc: https://www.youtube.com/embed/ckw-i5zTCD0
+  videoPublishedAt: '2024-10-13'
 psalm-14:
   videoSrc: https://www.youtube.com/embed/q6LnUsOJbEI
+  videoPublishedAt: '2024-10-20'
 psalm-15:
   videoSrc: https://www.youtube.com/embed/xAI4C3p-S48
+  videoPublishedAt: '2024-10-27'
 psalm-16:
   videoSrc: https://www.youtube.com/embed/e5MFM9rRlwg
+  videoPublishedAt: '2024-11-24'
 psalm-17:
   videoSrc: https://www.youtube.com/embed/ED2mzUnNERE
+  videoPublishedAt: '2024-12-01'
 psalm-18:
   videoSrc: https://www.youtube.com/embed/79BxxTxUbwo
+  videoPublishedAt: '2024-12-08'
 psalm-19:
   videoSrc: https://www.youtube.com/embed/dxuftK4jdLc
+  videoPublishedAt: '2024-12-17'
 psalm-20:
   videoSrc: https://www.youtube.com/embed/TkXTsZ2Hq1Q
+  videoPublishedAt: '2025-01-26'
 psalm-21:
   videoSrc: https://www.youtube.com/embed/LbbVMnLOru4
+  videoPublishedAt: '2025-01-19'
 psalm-22:
   videoSrc: https://www.youtube.com/embed/oYVj5qNFKIw
+  videoPublishedAt: '2025-02-02'
 psalm-23:
   videoSrc: https://www.youtube.com/embed/rXq87rIyR_k
+  videoPublishedAt: '2025-02-09'
 psalm-24:
   videoSrc: https://www.youtube.com/embed/KZqZFkJez94
+  videoPublishedAt: '2025-02-15'
 psalm-25:
   videoSrc: https://www.youtube.com/embed/u6ov41WpvxA
+  videoPublishedAt: '2025-03-09'
 psalm-26:
   videoSrc: https://www.youtube.com/embed/IWIY9neUonY
+  videoPublishedAt: '2025-03-17'
 psalm-27:
   videoSrc: https://www.youtube.com/embed/x3okeL_cAE4
+  videoPublishedAt: '2025-03-23'
 psalm-28:
   videoSrc: https://www.youtube.com/embed/MOSCmY5UxeA
+  videoPublishedAt: '2025-03-30'
 psalm-29:
   videoSrc: https://www.youtube.com/embed/fHa_1I9sO0w
+  videoPublishedAt: '2025-04-06'
 psalm-30:
   videoSrc: https://www.youtube.com/embed/ltGB-Yt03bY
+  videoPublishedAt: '2025-04-20'
 psalm-31:
   videoSrc: https://www.youtube.com/embed/eEZ3mSG3K5Y
+  videoPublishedAt: '2025-04-27'
 psalm-35:
   videoSrc: https://www.youtube.com/embed/M5RUkaH7m70
+  videoPublishedAt: '2025-05-25'
 psalm-36:
   videoSrc: https://www.youtube.com/embed/s7dXyuLTOGA
+  videoPublishedAt: '2025-06-01'
 psalm-32:
   videoSrc: https://www.youtube.com/embed/dxh-AcvImUc
+  videoPublishedAt: '2025-05-04'
 psalm-33:
   videoSrc: https://www.youtube.com/embed/DLi1LV3AgIo
+  videoPublishedAt: '2025-05-11'
 psalm-34:
   videoSrc: https://www.youtube.com/embed/OdtoOEOSj6I
+  videoPublishedAt: '2025-05-18'
 psalm-37:
   videoSrc: https://www.youtube.com/embed/AXyVKFyj89M
+  videoPublishedAt: '2025-06-08'
 psalm-38:
   videoSrc: https://www.youtube.com/embed/BFTWLaTAz_Y
+  videoPublishedAt: '2025-06-14'
 psalm-39:
   videoSrc: https://www.youtube.com/embed/OA4RD5ca0B0
+  videoPublishedAt: '2025-06-22'
 psalm-40:
   videoSrc: https://www.youtube.com/embed/kTP245EbGOY
+  videoPublishedAt: '2025-07-13'
 psalm-41:
   videoSrc: https://www.youtube.com/embed/VkzFPxZ1_K0
+  videoPublishedAt: '2025-07-20'
 psalm-42:
   videoSrc: https://www.youtube.com/embed/HF5lfrPse0g
+  videoPublishedAt: '2025-07-27'
 psalm-43:
   videoSrc: https://www.youtube.com/embed/xBoyIp5WZaU
+  videoPublishedAt: '2025-08-03'
 psalm-44:
   videoSrc: https://www.youtube.com/embed/hc9wSnTX-bc
+  videoPublishedAt: '2025-08-10'
 psalm-45:
   videoSrc: https://www.youtube.com/embed/yzEu7OaKoDs
+  videoPublishedAt: '2025-08-30'
 psalm-46:
   videoSrc: https://www.youtube.com/embed/jlKjTf3GN9w
+  videoPublishedAt: '2025-08-31'
 psalm-47:
   videoSrc: https://www.youtube.com/embed/Et9AqU4ToKE
+  videoPublishedAt: '2025-09-07'
 psalm-48:
   videoSrc: https://www.youtube.com/embed/RD4D6_nP3dM
+  videoPublishedAt: '2025-09-14'
 psalm-49:
   videoSrc: https://www.youtube.com/embed/4cgmnD8DkIY
+  videoPublishedAt: '2025-09-21'
 psalm-50:
   videoSrc: https://www.youtube.com/embed/yqR2hF9iSmw
+  videoPublishedAt: '2025-09-28'
 psalm-51:
   videoSrc: https://www.youtube.com/embed/nw1xDSTRH84
+  videoPublishedAt: '2025-10-05'
 psalm-52:
   videoSrc: https://www.youtube.com/embed/FnHLrbmPU24
+  videoPublishedAt: '2025-10-12'
 psalm-53:
   videoSrc: https://www.youtube.com/embed/9vSP133e-gE
+  videoPublishedAt: '2025-10-19'
 psalm-54:
   videoSrc: https://www.youtube.com/embed/YEn5Ir_P_XA
+  videoPublishedAt: '2025-10-26'
 psalm-55:
   videoSrc: https://www.youtube.com/embed/PavNj5BU5tY
+  videoPublishedAt: '2025-11-16'
 psalm-56:
   videoSrc: https://www.youtube.com/embed/QnLgeFkNYB4
+  videoPublishedAt: '2025-11-23'
 psalm-57:
   videoSrc: https://www.youtube.com/embed/A_Qc_pjAthA
+  videoPublishedAt: '2025-11-30'
 psalm-58:
   videoSrc: https://www.youtube.com/embed/3VFdAgIPGUs
+  videoPublishedAt: '2025-12-07'
 psalm-59:
   videoSrc: https://www.youtube.com/embed/n39Ou78UPuI
+  videoPublishedAt: '2025-12-14'
 psalm-60:
   videoSrc: https://www.youtube.com/embed/SvqO2IJn5A0
+  videoPublishedAt: '2025-12-28'
 psalm-61:
   videoSrc: https://www.youtube.com/embed/zpgVcNQ2o2Y
+  videoPublishedAt: '2026-01-04'
 psalm-62:
   videoSrc: https://www.youtube.com/embed/B1x-9wWyZlI
+  videoPublishedAt: '2026-01-11'
 psalm-63:
   videoSrc: https://www.youtube.com/embed/OqCy2t16nXM
+  videoPublishedAt: '2026-01-18'
 psalm-64:
   videoSrc: https://www.youtube.com/embed/lA6HMrnScNQ
+  videoPublishedAt: '2026-01-25'
 psalm-65:
   videoSrc: https://www.youtube.com/embed/OJSc1vfa0BY
+  videoPublishedAt: '2026-02-01'
 psalm-66:
   videoSrc: https://www.youtube.com/embed/7NkOwVhCJ3s
+  videoPublishedAt: '2026-02-08'
 psalm-67:
   videoSrc: https://www.youtube.com/embed/1nZZL8xEoCs
+  videoPublishedAt: '2026-02-15'
 psalm-68:
   videoSrc: https://www.youtube.com/embed/tQRZyR7Ee6M
+  videoPublishedAt: '2026-02-22'
 psalm-69:
   videoSrc: https://www.youtube.com/embed/LbWvM9FXPsQ
+  videoPublishedAt: '2026-03-01'
 psalm-70:
   videoSrc: https://www.youtube.com/embed/Oh9s7CjIJ9w
+  videoPublishedAt: '2026-03-08'
 psalm-71:
   videoSrc: https://www.youtube.com/embed/8NvFmHN6ae0
+  videoPublishedAt: '2026-03-16'
 psalm-72:
   videoSrc: https://www.youtube.com/embed/VoWe8E8M9sc
+  videoPublishedAt: '2026-03-22'
 psalm-73:
   videoSrc: https://www.youtube.com/embed/2H_wlT0moHM
+  videoPublishedAt: '2026-03-29'

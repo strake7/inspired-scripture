@@ -72,8 +72,10 @@ export default function Study({ study, studiesForBook }) {
           '@id': `https://inspiredscripture.com/bible-studies/${study.slug}`,
         },
         image: 'https://inspiredscripture.com/welcome-span.jpg',
-        datePublished: '2020-01-01',
-        dateModified: '2024-01-01',
+        ...(study.videoPublishedAt && {
+          datePublished: study.videoPublishedAt,
+          dateModified: study.videoPublishedAt,
+        }),
       },
       ...(study.videoSrc
         ? [
@@ -82,7 +84,7 @@ export default function Study({ study, studiesForBook }) {
               name: `${study.title} - Bible Study Video`,
               description: study.description,
               thumbnailUrl: `https://img.youtube.com/vi/${study.videoSrc.split('/embed/')[1]?.split('?')[0]}/maxresdefault.jpg`,
-              uploadDate: '2020-01-01',
+              uploadDate: study.videoPublishedAt || undefined,
               contentUrl: study.videoSrc,
               embedUrl: study.videoSrc,
             },
