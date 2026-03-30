@@ -74,7 +74,7 @@ export default function Layout({ children, meta = { title, description } }) {
                   src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8"
                   async={true}
                 />
-                <div style={{ minWidth: '325px' }}>
+                <div style={{ minWidth: '325px', minHeight: '44px' }}>
                   <div className="gcse-search">Loading...</div>
                 </div>
               </Nav.Item>
