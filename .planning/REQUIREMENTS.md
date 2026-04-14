@@ -58,23 +58,23 @@ Deferred to future release. Tracked but not in current roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| META-01 | — | Pending |
-| META-02 | — | Pending |
-| META-03 | — | Pending |
-| META-04 | — | Pending |
-| META-05 | — | Pending |
-| HTML-01 | — | Pending |
-| HTML-02 | — | Pending |
-| ADS-01 | — | Pending |
-| VERIFY-01 | — | Pending |
-| VERIFY-02 | — | Pending |
-| VERIFY-03 | — | Pending |
+| ADS-01 | Phase 1 | Pending |
+| META-01 | Phase 2 | Pending |
+| META-02 | Phase 2 | Pending |
+| META-03 | Phase 2 | Pending |
+| META-04 | Phase 2 | Pending |
+| META-05 | Phase 2 | Pending |
+| HTML-01 | Phase 2 | Pending |
+| HTML-02 | Phase 2 | Pending |
+| VERIFY-01 | Phase 3 | Pending |
+| VERIFY-02 | Phase 3 | Pending |
+| VERIFY-03 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 11 total
-- Mapped to phases: 0
-- Unmapped: 11 ⚠️
+- Mapped to phases: 11
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after initial definition*
+*Last updated: 2026-04-13 after roadmap creation*
