@@ -28,7 +28,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Meta descriptions for studies like Job begin with the first real sentence, not punctuation from the "Introduction" header
   4. Homepage structured data contains no SearchAction markup
   5. Every page (homepage, study pages) has exactly one H1 tag in the rendered HTML
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Fix study title trimming and description extraction bugs in data layer
+- [ ] 01-02-PLAN.md — Remove all ad infrastructure, fix HTML structure and SearchAction
 
 ### Phase 2: Build Trust Signals
 **Goal**: Google can identify a real, credible author behind every study and see temporal freshness signals in both structured data and sitemap
@@ -62,6 +65,6 @@ Phases execute in numeric order: 1 -> 2 -> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Stop the Bleeding | 0/TBD | Not started | - |
+| 1. Stop the Bleeding | 0/2 | Planned | - |
 | 2. Build Trust Signals | 0/TBD | Not started | - |
 | 3. Strengthen Structure & Verify | 0/TBD | Not started | - |
