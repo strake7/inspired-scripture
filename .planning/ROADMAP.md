@@ -30,8 +30,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Every page (homepage, study pages) has exactly one H1 tag in the rendered HTML
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Fix study title trimming and description extraction bugs in data layer
-- [ ] 01-02-PLAN.md — Remove all ad infrastructure, fix HTML structure and SearchAction
+- [x] 01-01-PLAN.md — Fix study title trimming and description extraction bugs in data layer
+- [x] 01-02-PLAN.md — Remove all ad infrastructure, fix HTML structure and SearchAction
 
 ### Phase 2: Build Trust Signals
 **Goal**: Google can identify a real, credible author behind every study and see temporal freshness signals in both structured data and sitemap
