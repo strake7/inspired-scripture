@@ -1,4 +1,3 @@
-import Ad from '../components/ad'
 import Layout from '../components/layout'
 import { Card, ListGroup, Row, Container, Col } from 'react-bootstrap'
 import Heading from '../components/heading'
@@ -156,16 +155,6 @@ const Home = ({ allTopics, studiesByBook }) => {
               </a>
             </Col>
           ))}
-        </Row>
-        <Row>
-          <div className="ad-container">
-            <Ad
-              style={{ display: 'block', width: '100%' }}
-              data-ad-slot="2205708236"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          </div>
         </Row>
         <hr className="mt-sm-5 mb-sm-5" />
         <h2 id="bible-studies">Bible Studies by Book</h2>

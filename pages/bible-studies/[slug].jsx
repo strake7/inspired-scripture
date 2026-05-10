@@ -11,8 +11,6 @@ import {
 } from 'react-bootstrap'
 import Heading from '../../components/heading'
 import ErrorPage from 'next/error'
-import ReactDOMServer from 'react-dom/server'
-import Ad from '../../components/ad'
 
 export default function Study({ study, studiesForBook }) {
   const router = useRouter()
@@ -31,18 +29,6 @@ export default function Study({ study, studiesForBook }) {
         ></iframe>
       </div>
     ) : null
-  const adHtml = ReactDOMServer.renderToString(
-    <div className="ad-container">
-      <Ad
-        style={{ height: '250px' }}
-        data-ad-slot="2205708236"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
-    </div>,
-  )
-  const studyContentWithAd = study.content.replace('<h2', `${adHtml}<h2`)
-
   // Generate structured data for the study
   const structuredData = {
     '@context': 'https://schema.org',
@@ -182,7 +168,7 @@ export default function Study({ study, studiesForBook }) {
           <Heading>{study.title}</Heading>
           {renderStudyVideo()}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: studyContentWithAd }}></div>
+        <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
       </Container>
     </Layout>
   )
