@@ -169,15 +169,7 @@ export default function Study({ study, studiesForBook }) {
           {renderStudyVideo()}
         </div>
         <div
-          dangerouslySetInnerHTML={{
-            // Strip h1 tags from study HTML — the Heading component above is the
-            // page's single h1. 14 studies have a second h1 buried in their content
-            // (e.g., job-1.html line 14) which would create duplicate h1s.
-            __html: study.content.replace(
-              /<h1[^>]*>[\s\S]*?<\/h1>\s*/gi,
-              '',
-            ),
-          }}
+          dangerouslySetInnerHTML={{ __html: study.content }}
         ></div>
       </Container>
     </Layout>
