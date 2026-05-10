@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Meta from './meta'
 import Script from 'next/script'
 import Scripts from './scripts'
@@ -69,14 +69,32 @@ export default function Layout({ children, meta = { title, description } }) {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Item>
+              <Nav.Item className="d-flex align-items-center">
                 <Script
                   src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8"
                   async={true}
                 />
-                <div style={{ minWidth: '250px' }}>
-                  <div className="gcse-search">Loading...</div>
-                </div>
+                <Form
+                  className="d-flex"
+                  onSubmit={(e) => {
+                    e.preventDefault()
+                    const q = e.target.elements.q.value
+                    if (q && window.google?.search?.cse?.element) {
+                      const el =
+                        window.google.search.cse.element.getElement('searchresults')
+                      if (el) el.execute(q)
+                    }
+                  }}
+                >
+                  <Form.Control
+                    type="search"
+                    name="q"
+                    placeholder="Search"
+                    size="sm"
+                    style={{ minWidth: '200px' }}
+                  />
+                </Form>
+                <div className="gcse-searchresults-only" data-gname="searchresults"></div>
               </Nav.Item>
               <Nav.Link href="/about">About</Nav.Link>
               <NavDropdown title="Bible Studies by Topic">
