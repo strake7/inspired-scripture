@@ -168,7 +168,14 @@ export default function Study({ study, studiesForBook }) {
           <Heading>{study.title}</Heading>
           {renderStudyVideo()}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: study.content.replace(
+              /^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i,
+              '',
+            ),
+          }}
+        ></div>
       </Container>
     </Layout>
   )
