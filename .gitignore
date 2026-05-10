@@ -30,3 +30,5 @@ pnpm-debug.log*
 /_studies/**/*.doc
 .aider*
 /.agent-shell/
+.planning/
+.playwright-mcp/
