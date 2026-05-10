@@ -171,7 +171,7 @@ export default function Study({ study, studiesForBook }) {
         <div
           dangerouslySetInnerHTML={{
             __html: study.content.replace(
-              /^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i,
+              /<h1[^>]*>[\s\S]*?<\/h1>\s*/gi,
               '',
             ),
           }}
