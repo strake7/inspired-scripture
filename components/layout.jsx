@@ -68,8 +68,8 @@ export default function Layout({ children, meta = { title, description } }) {
             id="basic-navbar-nav"
             className="justify-content-end"
           >
-            <Nav>
-              <Nav.Item className="d-flex align-items-center">
+            <Nav className="align-items-center">
+              <Nav.Item>
                 <Script
                   src="https://cse.google.com/cse.js?cx=36dcdc8b2b66146f8"
                   async={true}
