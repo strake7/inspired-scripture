@@ -168,9 +168,7 @@ export default function Study({ study, studiesForBook }) {
           <Heading>{study.title}</Heading>
           {renderStudyVideo()}
         </div>
-        <div
-          dangerouslySetInnerHTML={{ __html: study.content }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: study.content }}></div>
       </Container>
     </Layout>
   )

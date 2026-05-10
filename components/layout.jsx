@@ -81,7 +81,9 @@ export default function Layout({ children, meta = { title, description } }) {
                     const q = e.target.elements.q.value
                     if (q && window.google?.search?.cse?.element) {
                       const el =
-                        window.google.search.cse.element.getElement('searchresults')
+                        window.google.search.cse.element.getElement(
+                          'searchresults',
+                        )
                       if (el) el.execute(q)
                     }
                   }}
@@ -94,7 +96,10 @@ export default function Layout({ children, meta = { title, description } }) {
                     style={{ minWidth: '200px' }}
                   />
                 </Form>
-                <div className="gcse-searchresults-only" data-gname="searchresults"></div>
+                <div
+                  className="gcse-searchresults-only"
+                  data-gname="searchresults"
+                ></div>
               </Nav.Item>
               <Nav.Link href="/about">About</Nav.Link>
               <NavDropdown title="Bible Studies by Topic">
