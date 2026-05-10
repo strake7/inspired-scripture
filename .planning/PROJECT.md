@@ -12,15 +12,13 @@ Restore Google's trust in the site so that Bible study pages rank and receive or
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Remove all AdSense ad infrastructure — Validated in Phase 01: Stop the Bleeding
+- [x] Fix trailing newline in all study page titles — Validated in Phase 01: Stop the Bleeding
+- [x] Fix meta descriptions starting with punctuation — Validated in Phase 01: Stop the Bleeding
+- [x] Remove false SearchAction structured data — Validated in Phase 01: Stop the Bleeding
+- [x] Fix multiple H1 tags on study pages and homepage — Validated in Phase 01: Stop the Bleeding
 
 ### Active
-
-- [ ] Disable AdSense auto-ads so ad placement is explicitly controlled (single manual ad per page)
-- [ ] Fix trailing newline in all study page titles (corrupts og:title, structured data, breadcrumbs)
-- [ ] Fix meta descriptions starting with punctuation (". Job is the oldest...")
-- [ ] Remove false SearchAction structured data pointing to nonexistent /search page
-- [ ] Fix multiple H1 tags on study pages and homepage
 - [ ] Add visible author byline to study pages (name + link to /about)
 - [ ] Overhaul About page with author bio, credentials, and expertise signals
 - [ ] Add datePublished/dateModified to Article structured data
@@ -66,7 +64,7 @@ Restore Google's trust in the site so that Bible study pages rank and receive or
 |----------|-----------|---------|
 | Broaden scope beyond metadata bugs | Original narrow plan was never executed; 94% drop requires addressing multiple algorithmic factors, not just metadata | — Pending |
 | Address ads + metadata + E-E-A-T + structure | Three distinct algorithmic quality signals identified: ad density, trust/authority, site structure | — Pending |
-| Fix metadata bugs via code-level changes | Fixing in lib/studies.js and components propagates to all 530+ pages at build time | — Pending |
+| Fix metadata bugs via code-level changes | Fixing in lib/studies.js and components propagates to all 530+ pages at build time | Validated (Phase 01) |
 | Require visible author attribution | Schema-only author is a trust mismatch; Google needs visible E-E-A-T signals | — Pending |
 
 ## Evolution
