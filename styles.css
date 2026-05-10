@@ -24,7 +24,20 @@ h3 {
 }
 .gsc-control-cse {
   padding: 0 !important;
-  padding-top: 0.25em !important;
+  border: none !important;
+}
+.gsc-search-box {
+  margin: 0 !important;
+}
+.gsc-input-box {
+  height: 36px !important;
+}
+td.gsc-search-button {
+  vertical-align: middle !important;
+}
+.gsc-search-button-v2 {
+  padding: 7px 10px !important;
+  cursor: pointer;
 }
 .study-content {
   overflow-x: auto;
