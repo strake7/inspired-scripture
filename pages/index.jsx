@@ -1,4 +1,3 @@
-import Ad from '../components/ad'
 import Layout from '../components/layout'
 import { Card, ListGroup, Row, Container, Col } from 'react-bootstrap'
 import Heading from '../components/heading'
@@ -24,15 +23,6 @@ const Home = ({ allTopics, studiesByBook }) => {
         url: 'https://inspiredscripture.com/welcome-span.jpg',
       },
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate:
-          'https://inspiredscripture.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
   }
 
   return (
@@ -55,8 +45,10 @@ const Home = ({ allTopics, studiesByBook }) => {
         }}
       >
         <Container className="text-center" style={{ zIndex: 2 }}>
-          <h1 className="display-4 fw-bold mb-3">Inspired Scripture</h1>
-          <h2 className="pb-4">Biblical studies for the logical mind</h2>
+          <p className="display-4 fw-bold mb-3" style={{ marginBottom: 0 }}>
+            Inspired Scripture
+          </p>
+          <p className="h2 pb-4">Biblical studies for the logical mind</p>
           <blockquote className="blockquote">
             <p>
               “All Scripture is inspired by God and profitable for teaching, for
@@ -156,16 +148,6 @@ const Home = ({ allTopics, studiesByBook }) => {
               </a>
             </Col>
           ))}
-        </Row>
-        <Row>
-          <div className="ad-container">
-            <Ad
-              style={{ display: 'block', width: '100%' }}
-              data-ad-slot="2205708236"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
-          </div>
         </Row>
         <hr className="mt-sm-5 mb-sm-5" />
         <h2 id="bible-studies">Bible Studies by Book</h2>

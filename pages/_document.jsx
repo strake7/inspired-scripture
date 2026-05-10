@@ -11,7 +11,6 @@ export default function Document() {
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />

@@ -86,6 +86,11 @@ function touchup_html {
   sed -i '' 's/\.\.\/public//g' "$1"
   sed -i '' 's/\.png/\.jpg/g' "$1"
 
+  # demote any h1 tags after the first to h2 — the first h1 is the study title
+  # (extracted by getStudyBySlug); extra h1s would create duplicates on the page
+  echo $(tput setaf 4)Demoting extra h1 tags to h2 in $1$(tput sgr0)
+  awk 'BEGIN{n=0} /<h1/{n++; if(n>1){gsub(/<h1/,"<h2"); gsub(/<\/h1>/,"</h2>")}} {print}' "$1" > "${1}.tmp" && mv "${1}.tmp" "$1"
+
   # remove the <mark> tags from the html; they are typically unexpected from the
   # docx conversion in gdocs
   echo $(tput setaf 4)Removing mark tags in $1$(tput sgr0)
