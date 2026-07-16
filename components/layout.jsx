@@ -48,6 +48,8 @@ export default function Layout({ children, meta = { title, description } }) {
     Job: 'job-1',
     Psalm: 'psalm-1',
     Proverbs: 'proverbs-1',
+    Ecclesiastes: 'ecclesiastes-1',
+    Isaiah: 'isaiah-1',
   }
   return (
     <>
