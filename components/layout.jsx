@@ -49,6 +49,7 @@ export default function Layout({ children, meta = { title, description } }) {
     Psalm: 'psalm-1',
     Proverbs: 'proverbs-1',
     Ecclesiastes: 'ecclesiastes-1',
+    'Song of Solomon': 'song-of-solomon-1',
     Isaiah: 'isaiah-1',
   }
   return (
