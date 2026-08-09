@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import YAML from 'yaml'
+import { readPublishedReflections } from './read-reflections.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -35,19 +36,41 @@ async function generateSitemap() {
     priority: '0.7',
   }))
 
+  // Reflections carry a lastmod so Google can see the site is actively updated.
+  const reflections = readPublishedReflections()
+  const reflectionPages = reflections.map((reflection) => ({
+    url: `/reflections/${reflection.slug}`,
+    changefreq: 'yearly',
+    priority: '0.6',
+    lastmod: reflection.updated || reflection.date,
+  }))
+
   const staticPages = [
     { url: '', changefreq: 'monthly', priority: '1.0' },
     { url: '/about', changefreq: 'monthly', priority: '0.5' },
+    {
+      url: '/reflections',
+      changefreq: 'weekly',
+      priority: '0.7',
+      lastmod: reflections[0]?.updated || reflections[0]?.date,
+    },
   ]
 
-  const allPages = [...staticPages, ...studyPages, ...topicPages]
+  const allPages = [
+    ...staticPages,
+    ...studyPages,
+    ...topicPages,
+    ...reflectionPages,
+  ]
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages
   .map(
     (page) => `  <url>
-    <loc>${SITE_URL}${page.url}</loc>
+    <loc>${SITE_URL}${page.url}</loc>${
+      page.lastmod ? `\n    <lastmod>${page.lastmod}</lastmod>` : ''
+    }
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`,
@@ -58,7 +81,7 @@ ${allPages
   const publicDir = path.join(__dirname, '../public')
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
   console.log(
-    `✅ Sitemap generated with ${allPages.length} URLs (${studyPages.length} studies, ${topicPages.length} topics, ${staticPages.length} static pages)`,
+    `✅ Sitemap generated with ${allPages.length} URLs (${studyPages.length} studies, ${topicPages.length} topics, ${reflectionPages.length} reflections, ${staticPages.length} static pages)`,
   )
 }
 

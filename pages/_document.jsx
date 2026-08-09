@@ -14,6 +14,14 @@ export default function Document() {
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Reflections feed autodiscovery */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Inspired Scripture Reflections"
+          href="/rss.xml"
+        />
       </Head>
       <body>
         <Main />

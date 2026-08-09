@@ -11,6 +11,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://inspiredscripture.com/reflections</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://inspiredscripture.com/bible-studies/1-chronicles-1</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3609,5 +3615,11 @@
     <loc>https://inspiredscripture.com/topics/sin</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inspiredscripture.com/reflections/futility-of-trusting-in-wealth</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
