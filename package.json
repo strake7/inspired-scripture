@@ -18,7 +18,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.0.0",
     "marked": "^18.0.9",
-    "next": "^16.2.6",
+    "next": "^16.2.11",
     "react": "19.1.0",
     "react-bootstrap": "^2.10.6",
     "react-dom": "19.1.0",
