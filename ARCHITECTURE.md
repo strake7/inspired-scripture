@@ -14,9 +14,9 @@ HTML for every route, and the result is deployed to Netlify.
 The core data flow is:
 
 ```
-_studies/*.html  ──┐
-                   ├──▶  lib/  ──▶  pages/  ──▶  out/  (static HTML)
-lib/*.yml  ────────┘
+_studies/*.html      ──┐
+_reflections/*.md  ────┤──▶  lib/  ──▶  pages/  ──▶  out/  (static HTML)
+lib/*.yml  ────────────┘
 ```
 
 ## Codemap
@@ -30,6 +30,24 @@ chapter: `genesis-1a.html`, `psalm-37.html`, `1-samuel-15.html`.
 
 This directory is the **source of truth for study content**. Everything else
 references it by slug (filename without extension).
+
+### `_reflections/`
+
+Markdown reflections with YAML frontmatter, one per file. These accompany the
+weekly social media campaign: each reflection is a short standalone reading that
+funnels visitors into a full study. The filename is the slug
+(`/reflections/{slug}`).
+
+`_reflections/_template.md` documents every frontmatter field and is itself a
+permanent draft, so it never builds. The load-bearing field is `studySlug`,
+which joins a reflection to `_studies/{slug}.html` and pulls that study's title,
+description, and video through automatically.
+
+Reflections draw their material from the study they point at, so the writing is
+John's own rather than a paraphrase of it. Reflection prose uses no em dashes.
+
+Reflections with `draft: true` render on the dev server but are excluded from
+production builds, the sitemap, and the RSS feed.
 
 ### `lib/`
 

@@ -4,7 +4,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev -p 4000",
-    "build": "node scripts/generate-sitemap.mjs && next build",
+    "build": "node scripts/generate-sitemap.mjs && node scripts/generate-rss.mjs && next build",
     "start": "next dev -p 4000",
     "test": "jest",
     "lint": "eslint ."
@@ -17,6 +17,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.0.0",
+    "marked": "^18.0.9",
     "next": "^16.2.6",
     "react": "19.1.0",
     "react-bootstrap": "^2.10.6",
