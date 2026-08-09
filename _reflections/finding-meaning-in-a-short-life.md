@@ -3,7 +3,6 @@ title: Finding Meaning in a Short Life
 date: 2026-08-15
 studySlug: ecclesiastes-9
 description: Seven lessons from Ecclesiastes 9 for finding meaning in a life you cannot lengthen, from faith and hope to serving and trusting Jesus.
-draft: true
 ---
 
 Solomon said a live dog is better than a dead lion (Ecc. 9:4). The point is not
