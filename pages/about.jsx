@@ -7,6 +7,7 @@ import {
   faTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { Card, Col, Container, Row } from 'react-bootstrap'
@@ -52,7 +53,7 @@ export default function About() {
                   "for teaching, for reproof, for correction, for training in
                   righteousness."
                 </p>
-                <p>
+                <p className="mb-0">
                   Believers in Christ are correctly taught that He fulfilled all
                   of the tests for salvation. But believers are rarely taught
                   how the Old Testament can still be relevant to their walk for
@@ -153,7 +154,15 @@ export default function About() {
             <Card className="shadow-sm mb-4">
               <Card.Body>
                 <h2 className="h4 mb-3 border-bottom pb-2">Connect With Us</h2>
-                <div className="d-flex flex-wrap justify-content-center mb-3">
+                <p>
+                  Questions, corrections, or prayer requests are always welcome.
+                  Email us at{' '}
+                  <a href="mailto:john@inspiredscripture.com">
+                    john@inspiredscripture.com
+                  </a>
+                  .
+                </p>
+                <div className="d-flex flex-wrap justify-content-center mb-0">
                   <a
                     href="https://www.facebook.com/inspiredscripture"
                     target="_blank"
@@ -216,6 +225,13 @@ export default function About() {
                     aria-label="YouTube"
                   >
                     <FontAwesomeIcon icon={faYoutube} size="lg" />
+                  </a>
+                  <a
+                    href="mailto:john@inspiredscripture.com"
+                    className="btn btn-outline-primary"
+                    aria-label="Contact us by email"
+                  >
+                    <FontAwesomeIcon icon={faEnvelope} size="lg" />
                   </a>
                 </div>
               </Card.Body>
