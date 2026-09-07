@@ -3,7 +3,6 @@ title: Seven Things Jesus' Love Offers His Bride
 date: 2026-09-06
 studySlug: song-of-solomon-1
 description: Joy, encouragement, fellowship, purity, honor, admiration, support. Seven marks of Jesus' love for His bride, drawn from Song of Solomon 1.
-draft: true
 ---
 
 "For your love is sweeter than wine." (SoS 1:2). Charles Spurgeon once preached
