@@ -218,7 +218,7 @@ export default function About() {
                 </Card.Body>
               </Card>
 
-              <Card className="border-0 bg-light">
+              <Card className="bg-light">
                 <Card.Body className="text-center">
                   <h3 className="h6 mb-2">Thank You</h3>
                   <p className="small mb-0">

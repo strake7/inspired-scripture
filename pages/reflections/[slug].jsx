@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Link from 'next/link'
-import { Badge, Button, Container } from 'react-bootstrap'
+import { Badge, Button, Card, Container } from 'react-bootstrap'
 import Layout from '../../components/layout'
 import Heading from '../../components/heading'
 import ShareBar from '../../components/share-bar'
@@ -148,16 +148,18 @@ export default function Reflection({ reflection }) {
         <div dangerouslySetInnerHTML={{ __html: reflection.content }}></div>
 
         {reflection.study && (
-          <div className="border rounded p-4 my-4 bg-light d-print-none">
-            <h2 className="h5">Keep reading</h2>
-            <p className="mb-3">{reflection.study.description}</p>
-            <Button
-              href={`/bible-studies/${reflection.study.slug}`}
-              variant="primary"
-            >
-              Read the full study: {reflection.study.title}
-            </Button>
-          </div>
+          <Card className="bg-light my-4 d-print-none">
+            <Card.Body>
+              <h2 className="h5">Keep reading</h2>
+              <p className="mb-3">{reflection.study.description}</p>
+              <Button
+                href={`/bible-studies/${reflection.study.slug}`}
+                variant="primary"
+              >
+                Read the full study: {reflection.study.title}
+              </Button>
+            </Card.Body>
+          </Card>
         )}
 
         <ShareBar

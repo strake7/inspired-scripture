@@ -61,7 +61,7 @@ export default function Reflections({ reflections }) {
             const href = `/reflections/${reflection.slug}`
             return (
               <Col md={6} key={reflection.slug} className="mb-4">
-                <Card className="h-100">
+                <Card className="h-100 shadow-sm">
                   {/* Every link on the card points at the reflection. The study
                       is named for context but is only linked from the
                       reflection itself, so the listing never routes a reader

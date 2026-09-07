@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Heading from '../../components/heading'
 import ErrorPage from 'next/error'
 
-export default function Study({ topic = { slug, name, sections } }) {
+export default function Topic({ topic }) {
   const router = useRouter()
   if (!router.isFallback && !topic?.slug) {
     return <ErrorPage statusCode={404} />
