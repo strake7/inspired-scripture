@@ -42,10 +42,11 @@ export default function Reflections({ reflections }) {
         structuredData,
       }}
     >
-      <Container id="content" className="py-5">
-        <Heading>Reflections</Heading>
-        <p className="lead mb-5">{DESCRIPTION}</p>
+      <Heading band lead={DESCRIPTION}>
+        Reflections
+      </Heading>
 
+      <Container id="content" className="py-5">
         {reflections.length === 0 && (
           <p>
             No reflections yet, so check back soon or{' '}

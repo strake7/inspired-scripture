@@ -61,15 +61,21 @@ export default function Study({ topic = { slug, name, sections } }) {
         structuredData,
       }}
     >
-      <Container className="study-content pt-2">
-        <Heading>{title}</Heading>
+      <Heading
+        band
+        lead={`John Edson's bible studies and commentary concerning ${topic.name}.`}
+      >
+        {title}
+      </Heading>
+
+      <Container className="py-5">
         <Row>
           {topic.sections.map((section) => (
-            <Col sm={12} md={6} key={section.name}>
-              <h6 className="h6">{section.name}</h6>
+            <Col sm={12} md={6} key={section.name} className="mb-5">
+              <h2 className="h4 mb-3 pb-2 border-bottom">{section.name}</h2>
               <ol>
                 {section.studies.map((study, i) => (
-                  <li key={study.slug + i}>
+                  <li key={study.slug + i} className="mb-2">
                     <a href={`/bible-studies/${study.slug}`}>{study.name}</a>
                   </li>
                 ))}
