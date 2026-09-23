@@ -53,7 +53,8 @@ h3 {
 .study-content a {
   word-wrap: break-word;
 }
-.study-content h1 {
+/* Headings inside rendered study HTML; the page title keeps the display scale. */
+.study-content h1:not(.page-title) {
   font-size: 1.25em;
   font-weight: bold;
   margin-top: 0;
